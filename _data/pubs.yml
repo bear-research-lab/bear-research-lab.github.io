@@ -18,6 +18,7 @@
         publisher={IEEE}
       }
     project-website: "https://sites.google.com/view/constrained-tendon-routings"
+    Supplementary: "https://bear-research-lab.github.io/assets/pub/RAL_CTR_SM.pdf"
 
 - year: 2025
   month: 2
@@ -40,6 +41,34 @@
       }
     project-website: "https://sites.google.com/view/dt-routing/overview"
     video: "https://www.youtube.com/watch?v=3sa5VhzjjoU"
+    Supplementary: "https://bear-research-lab.github.io/assets/pub/RAL_DTR_SM.pdf"
+
+- year: 2025
+  month: 2
+  selected: True
+  topics: ["Wearable Robots", "Assist Robots", "Under-actuated Tendon Routing"]
+  title: "Exo-Glove Shell: A Hybrid Exo-Glove for the Thumb Opposition with an Under-Actuated Tendon-Driven System,"
+  authors: "Byungchul Kim, Hyungmin Choi, Kyubum Kim, Sejin Jeong, and Kyu-Jin Cho"
+  venue: "Soft Robotics"
+  kind: journal 
+  img: "/assets/img/pubs/2025_SORO_EGS.png"
+  links:
+    paper: "https://bear-research-lab.github.io/assets/pub/SORO_EGS.pdf"
+    bibtex: |
+      @article{kim2025exoshell,
+        title={Exo-Glove Shell: A hybrid rigid-soft wearable robot for thumb opposition with an under-actuated tendon-driven system},
+        author={Kim, Byungchul and Choi, Hyungmin and Kim, Kyubum and Jeong, Sejin and Cho, Kyu-Jin},
+        journal={Soft Robotics},
+        volume={12},
+        number={1},
+        pages={22--33},
+        year={2025},
+        publisher={Mary Ann Liebert, Inc., publishers 140 Huguenot Street, 3rd Floor New~…}
+      }
+    video: "https://youtu.be/gfiMNtUlHK4"
+    Supplementary: "https://bear-research-lab.github.io/assets/pub/SORO_EGS_SM.pdf"
+    project-website: "https://sites.google.com/view/exo-gloveshell/"
+
 
 - year: 2025
   month: 4
@@ -61,6 +90,8 @@
         publisher={Mary Ann Liebert, Inc., publishers 140 Huguenot Street, 3rd Floor New~…}
       }
     video: "https://www.youtube.com/watch?v=XG7Zscma3a4"
+    Supplementary: "https://bear-research-lab.github.io/assets/pub/SORO_EP3_SM.pdf"
+
 
 - year: 2025
   month: 5
