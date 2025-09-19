@@ -1,14 +1,35 @@
 - year: 2025
-  month: 1
+  month: 10
   selected: true
   topics: ["Generative/Datadriven", "Simulation", "Robot Body", "Optimization"]
-  title: "Generative-AI-Driven Jumping Robot Design Using Diffusion Models1"
-  authors: "Byungchul Kim*, Tsun-Hsuan Wang*, Daniela Rus"
-  venue: "ICRA 2025"
+  title: "Exo-Glove Pinch: Soft Hand-wearable Robot Designed through the Analysis of the Constrained Tendon Routing"
+  authors: "Byungchul Kim, Useok Jeong, and Kyu-Jin Cho"
+  venue: "IEEE Robotics and Automation Letters (RA-L)"
   kind: journal 
-  img: "/assets/img/pubs/ICRA_GENJUMP_2025_05.png"
+  img: "/assets/img/pubs/2025_RAL_CTR.png"
   links:
-    paper: "https://bc-kim.github.io/assets/Publications/CTR.pdf"
+    paper: "https://bear-research-lab.github.io/assets/pub/RAL_CTR.pdf"
+    project: "https://sites.google.com/view/constrained-tendon-routings"
+    bibtex: |
+      @article{kim2025exo,
+        title={Exo-Glove Pinch: A Soft, Hand-Wearable Robot Designed Through Constrained Tendon Routing Analysis},
+        author={Kim, Byungchul and Jeong, Useok and Cho, Kyu-Jin},
+        journal={IEEE Robotics and Automation Letters},
+        year={2025},
+        publisher={IEEE}
+      }
+
+- year: 2025
+  month: 2
+  selected: False
+  topics: ["Generative/Datadriven", "Simulation", "Robot Body"]
+  title: "Dual-Tendon Routing: Tendon Routing for Under-actuated Tendon-Driven Soft Hand-wearable Robot"
+  authors: "Byungchul Kim, Useok Jeong, and Kyu-Jin Cho"
+  venue: "IEEE Robotics and Automation Letters (RA-L)"
+  kind: journal 
+  img: "/assets/img/pubs/2025_RAL_DTR.png"
+  links:
+    paper: "https://bear-research-lab.github.io/assets/pub/RAL_DTR.pdf"
     project: "https://sites.google.com/view/constrained-tendon-routings"
     bibtex: |
       @article{kim2025dual,
@@ -18,56 +39,20 @@
         year={2025},
         publisher={IEEE}
       }
-    video: "https://www.youtube.com/watch?v=ft-KLXvjJZQ"
-  highlights:
-    "TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest."
+    video: "https://www.youtube.com/watch?v=8iz3lKWT_M8"
+
 
 - year: 2025
   month: 5
-  selected: False
-  topics: ["Generative/Datadriven", "Simulation", "Robot Body"]
-  title: "Generative-AI-Driven Jumping Robot Design Using Diffusion Models5"
-  authors: "Byungchul Kim*, Tsun-Hsuan Wang*, Daniela Rus"
-  venue: "ICRA 2025"
-  kind: journal 
-  img: "/assets/img/pubs/ICRA_GENJUMP_2025_05.png"
-  links:
-    paper: "https://bc-kim.github.io/assets/Publications/CTR.pdf"
-    project: "https://sites.google.com/view/constrained-tendon-routings"
-    bibtex: |
-      @article{kim2025dual,
-        title={Dual-tendon routing: Tendon routing for under-actuated tendon-driven soft hand-wearable robot},
-        author={Kim, Byungchul and Jeong, Useok and Cho, Kyu-Jin},
-        journal={IEEE Robotics and Automation Letters},
-        year={2025},
-        publisher={IEEE}
-      }
-    video: "https://www.youtube.com/watch?v=x6TWdqM4AtI"
-    code: "https://github.com/bc-kim/SNUBRL_APP"
-    press:
-      - url: "https://www.csail.mit.edu/news/using-generative-ai-help-robots-jump-higher-and-land-better"
-        outlet: "MIT CSAIL"
-        date: "2024-12-18"
-      - url: "https://www.technologyreview.kr/%EC%9D%B4-%EC%A0%90%ED%94%84-%EB%A1%9C%EB%B4%87%EC%9D%80-ai%EA%B0%80-%EC%84%A4%EA%B3%84%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4-mit%EC%9D%98-%EA%B9%80%EB%B3%91%EC%B2%A0/"
-        outlet: "MIT Technology Review"
-        date: "2025-05-21"
-
-  highlights:
-    "TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest."
-
-
-- year: 2025
-  month: 3
   selected: true
-  kind: journal 
+  kind: conference
   topics: ["Generative/Datadriven", "Simulation", "Robot Body"]
   title: "Generative-AI-Driven Jumping Robot Design Using Diffusion Models3"
   authors: "Byungchul Kim*, Tsun-Hsuan Wang*, Daniela Rus"
   venue: "ICRA 2025"
   img: "/assets/img/pubs/ICRA_GENJUMP_2025_05.png"
   links:
-    paper: "https://bc-kim.github.io/assets/Publications/CTR.pdf"
-    project: "https://sites.google.com/view/constrained-tendon-routings"
+    paper: "https://bear-research-lab.github.io/assets/pub/ICRA_GENJUMP.pdf"
     bibtex: |
       @article{kim2025dual,
         title={Dual-tendon routing: Tendon routing for under-actuated tendon-driven soft hand-wearable robot},
@@ -76,29 +61,40 @@
         year={2025},
         publisher={IEEE}
       }
-    video: "https://www.youtube.com/watch?v=ft-KLXvjJZQ"
-  highlights:
-    "TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest."
-
+    video: "https://www.youtube.com/watch?v=seLBEMrhMjI"
+    press:
+    - url: "https://www.csail.mit.edu/news/using-generative-ai-help-robots-jump-higher-and-land-better"
+      outlet: "MIT CSAIL"
+      date: "2024-12-18"
+    - url: "https://www.technologyreview.kr/%EC%9D%B4-%EC%A0%90%ED%94%84-%EB%A1%9C%EB%B4%87%EC%9D%80-ai%EA%B0%80-%EC%84%A4%EA%B3%84%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4-mit%EC%9D%98-%EA%B9%80%EB%B3%91%EC%B2%A0/"
+      outlet: "MIT Technology Review (Korea)"
+      date: "2025-05-21"
+    - url: "https://news.mit.edu/2025/using-generative-ai-help-robots-jump-higher-land-safely-0627"
+      outlet: "MIT News"
+      date: "2025-06-27"
+    - url: "https://www.youtube.com/watch?v=dI1J4aPcbmc"
+      outlet: "MIT CSAIL Youtube"
+      date: "2025-06-30"
 
 - year: 2024
   month: 5
   selected: true
   kind: journal 
   topics: ["Generative/Datadriven", "Robot Body"]
-  title: "Generative-AI-Driven Jumping Robot Design Using Diffusion Models"
-  authors: "Byungchul Kim*, Tsun-Hsuan Wang*, Daniela Rus"
-  venue: "ICRA 2025"
+  title: "Underactuated Robotic Gripper with Fiber-Optic Force Sensing Tendons"
+  authors: "Jaehyun Lee, Byungchul Kim, Kyu-Jin Cho, and Yong-Lae Park"
+  venue: "IEEE Robotics and Automation Letters (RA-L)"
   img: "/assets/img/pubs/ICRA_GENJUMP_2025_05.png"
   links:
-    paper: "https://example.org/paper.pdf"
+    paper: "https://bear-research-lab.github.io/assets/pub/RAL_FBG.pdf"
     bibtex: |
-      @inproceedings{kim2024example,
-        title={Example older entry},
-        author={Kim, Byungchul and Coauthors},
-        booktitle={Proceedings of Example Conf.},
-        year={2024}
+      @article{yi2023underactuated,
+        title={Underactuated robotic gripper with fiber-optic force sensing tendons},
+        author={Yi, Jaehyun and Kim, Byungchul and Cho, Kyu-Jin and Park, Yong-Lae},
+        journal={IEEE Robotics and Automation Letters},
+        volume={8},
+        number={11},
+        pages={7607--7614},
+        year={2023},
+        publisher={IEEE}
       }
-  highlights:
-    "TestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTestTest."
-

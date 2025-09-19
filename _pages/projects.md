@@ -25,6 +25,7 @@ One direction is enabling technology side. This includes how can we build and co
 </div>
 
 ---
+
 ### Category 2. Application 
 Another direction is application side. This includes how can we apply robotics to real-world problems, especially in human-centered domains. This means that, we are focusing on **specific robots** rather than **methods**. From this perspective, we will build robots that can assists human beings in our daily life, such as kitchen assistance robot, wearable robots and prosthetics.
 
