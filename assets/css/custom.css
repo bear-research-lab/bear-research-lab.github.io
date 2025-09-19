@@ -568,3 +568,39 @@ body {
         /* optional: make text a bit smaller */
     }
 }
+
+/* Fix BibTeX text color on iPhone (and anywhere) */
+.pub-bibtex,
+.pub-bibtex pre,
+.pub-bibtex code {
+    color: var(--text-2) !important;
+    background: transparent;
+    /* keep the container's bg only */
+}
+
+/* Optional: make links readable inside the BibTeX box */
+.pub-bibtex a {
+    color: var(--pill-text);
+}
+
+/* Dark mode: ensure good contrast in the BibTeX drawer */
+@media (prefers-color-scheme: dark) {
+    .pub-bibtex {
+        background: var(--code-bg);
+        border-color: var(--border);
+        color: var(--text) !important;
+        /* a bit brighter in dark mode */
+    }
+
+    .pub-bibtex pre,
+    .pub-bibtex code {
+        color: inherit !important;
+        background: transparent !important;
+    }
+
+    .pub-bibtex a {
+        color: #a7caff;
+    }
+
+    /* readable link color on dark bg */
+}
