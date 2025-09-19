@@ -551,7 +551,7 @@ body {
 }
 
 .pub-bibtex {
-    max-width: 600px;
+    max-width: 500px;
     /* adjust to your liking: 400px, 500px, etc. */
     margin: 8px auto;
     /* auto left/right centers it */
