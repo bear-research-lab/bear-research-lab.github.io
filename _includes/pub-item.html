@@ -2,6 +2,7 @@
 pub-item.html — renders one publication with exactly four buttons:
 Paper | BibTeX | Press* | Links*
 *Press and Links appear only if there is data.
+
 Expected data schema (flexible):
 links:
 paper: "https://..."
@@ -38,13 +39,13 @@ press:
 Collect “extras” (unknown link keys) for the Links drawer.
 Keys treated as “known”: paper, bibtex, press.
 Everything else under links.* becomes a Links item.
+
 Supports:
 - Scalar string URL -> label is the key name (title-cased)
 - Object {title, url}
 - List of either form
 {%- endcomment -%}
 {%- assign known = "paper|bibtex|press" | split:"|" -%}
-{%- assign extras_exist = false -%}
 
 {%- capture extras_html -%}
 <ul class="pub-links-list">
@@ -52,9 +53,8 @@ Supports:
     {%- assign k = kv[0] | to_s | strip -%}
     {%- assign v = kv[1] -%}
     {%- unless known contains k -%}
-    {%- assign extras_exist = true -%}
     {%- if v contains 'http' and v.size > 0 and v.first == nil -%}
-    <li><a href="{{ v }}" target="_blank" rel="noopener">{{ k | replace: '_',' ' | replace: '-',' ' | capitalize }}</a>
+    <li><a href="{{ v }}" target="_blank" rel="noopener">{{ k | replace:'_',' ' | replace:'-',' ' | capitalize }}</a>
     </li>
     {%- elsif v.first and v.first.title -%}
     {%- for it in v -%}
@@ -62,7 +62,7 @@ Supports:
     {%- endfor -%}
     {%- elsif v.first and v.first contains 'http' -%}
     {%- for it in v -%}
-    <li><a href="{{ it }}" target="_blank" rel="noopener">{{ k | replace: '_',' ' | replace: '-',' ' | capitalize }} {{
+    <li><a href="{{ it }}" target="_blank" rel="noopener">{{ k | replace:'_',' ' | replace:'-',' ' | capitalize }} {{
             forloop.index }}</a></li>
     {%- endfor -%}
     {%- elsif v.url -%}
@@ -91,7 +91,8 @@ Supports:
             </div>
         </div>
 
-        <div class="pub-actions" style="margin-top:8px; display:flex; flex-wrap:wrap; gap:8px;">
+        <!-- ACTION BUTTONS: add .pub-links class so CSS pill styles apply -->
+        <div class="pub-actions pub-links">
             {%- if link_paper != "" -%}
             <a class="pub-btn" href="{{ link_paper }}" target="_blank" rel="noopener">Paper</a>
             {%- endif -%}
@@ -110,13 +111,13 @@ Supports:
         </div>
 
         {%- if has_bibtex -%}
-        <div id="bibtex-{{ uid }}" class="pub-bibtex" aria-hidden="true" style="margin-top:8px;">
-            <pre style="white-space:pre-wrap;"><code>{{ link_bibtex }}</code></pre>
+        <div id="bibtex-{{ uid }}" class="pub-bibtex" aria-hidden="true">
+            <pre><code>{{ link_bibtex }}</code></pre>
         </div>
         {%- endif -%}
 
         {%- if has_press -%}
-        <div id="press-{{ uid }}" class="pub-press" aria-hidden="true" style="margin-top:8px;">
+        <div id="press-{{ uid }}" class="pub-press" aria-hidden="true">
             <ul class="pub-press-list">
                 {%- if links.press.first and links.press.first.title -%}
                 {%- for pr in links.press -%}
@@ -130,7 +131,7 @@ Supports:
         {%- endif -%}
 
         {%- if extras_html contains '<li>' -%}
-            <div id="links-{{ uid }}" class="pub-links" aria-hidden="true" style="margin-top:8px;">
+            <div id="links-{{ uid }}" class="pub-links-drawer" aria-hidden="true">
                 {{ extras_html }}
             </div>
             {%- endif -%}
