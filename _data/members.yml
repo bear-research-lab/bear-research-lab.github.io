@@ -1,0 +1,43 @@
+- group: Principal Investigator
+  people:
+    - name: Byungchul Kim
+      slug: byungchul-kim
+      role: Assistant Professor
+      img: /assets/img/members/bckim.jpg
+      affiliation: "Dept. of Biomedical Engineering, Sungkyunkwan University"
+      office: "test"
+      phone: "test"
+      email: "bckim at mit.edu"
+      website: https://bc-kim.github.io
+      # linkedin: https://www.linkedin.com/in/byungchul-kim/
+      # scholar: https://scholar.google.com/citations?user=KPQ53S0AAAAJ&hl=en
+
+- group: Graduate Students
+  people:
+    - name: Bear1
+      slug: bear-1
+      img: /assets/img/members/bear.png
+      website: https://example.com/
+
+    - name: Bear2
+      slug: bear-2
+      img: /assets/img/members/bear.png
+      website: https://example.com/
+    
+    - name: Bear3
+      slug: bear-3
+      img: /assets/img/members/bear.png
+      website: https://example.com/
+
+    - name: Bear4
+      slug: bear-4
+      img: /assets/img/members/bear.png
+      website: https://example.com/
+
+    - name: Bear5
+      slug: bear-5
+      img: /assets/img/members/bear.png
+      website: https://example.com/
+
+- group: Undergraduate Researchers
+  people: []

@@ -1,0 +1,161 @@
+{%- comment -%}
+pub-item: render a single publication card with safe link checks.
+- arXiv removed
+- Adds Slides, Code, Press
+- Kind inference: journal/conference from venue; fallback to 'others'
+{%- endcomment -%}
+
+{%- assign p = include.pub -%}
+
+{%- comment -%} Stable UID for toggle targets {%- endcomment -%}
+{%- assign uid = p.title | append: '-' | append: p.year | slugify -%}
+
+{%- comment -%} Topics CSV (empty if none) {%- endcomment -%}
+{%- assign topics_csv = '' -%}
+{%- if p.topics and p.topics.size > 0 -%}
+{%- assign topics_csv = p.topics | join: ',' -%}
+{%- endif -%}
+
+{%- assign has_img = p.img -%}
+{%- assign links = p.links | default: {} -%}
+
+{%- comment -%} Normalize links to trimmed strings {%- endcomment -%}
+{%- assign link_paper = links.paper | default: '' | strip -%}
+{%- assign link_project = links.project | default: '' | strip -%}
+{%- assign link_video = links.video | default: '' | strip -%}
+{%- assign link_slides = links.slides | default: '' | strip -%}
+{%- assign link_code = links.code | default: '' | strip -%}
+{%- assign link_bibtex = links.bibtex | default: '' | strip -%}
+
+{%- comment -%} URL checks: http(s), site-relative '/', or mailto: {%- endcomment -%}
+{%- assign is_url_paper = false -%}
+{%- assign _p4 = link_paper | slice: 0,4 -%}
+{%- assign _p1 = link_paper | slice: 0,1 -%}
+{%- assign _p7 = link_paper | slice: 0,7 -%}
+{%- if _p4 == 'http' or _p1 == '/' or _p7 == 'mailto:' -%}{%- assign is_url_paper = true -%}{%- endif -%}
+
+{%- assign is_url_project = false -%}
+{%- assign _j4 = link_project | slice: 0,4 -%}
+{%- assign _j1 = link_project | slice: 0,1 -%}
+{%- assign _j7 = link_project | slice: 0,7 -%}
+{%- if _j4 == 'http' or _j1 == '/' or _j7 == 'mailto:' -%}{%- assign is_url_project = true -%}{%- endif -%}
+
+{%- assign is_url_video = false -%}
+{%- assign _v4 = link_video | slice: 0,4 -%}
+{%- assign _v1 = link_video | slice: 0,1 -%}
+{%- assign _v7 = link_video | slice: 0,7 -%}
+{%- if _v4 == 'http' or _v1 == '/' or _v7 == 'mailto:' -%}{%- assign is_url_video = true -%}{%- endif -%}
+
+{%- assign is_url_slides = false -%}
+{%- assign _s4 = link_slides | slice: 0,4 -%}
+{%- assign _s1 = link_slides | slice: 0,1 -%}
+{%- assign _s7 = link_slides | slice: 0,7 -%}
+{%- if _s4 == 'http' or _s1 == '/' or _s7 == 'mailto:' -%}{%- assign is_url_slides = true -%}{%- endif -%}
+
+{%- assign is_url_code = false -%}
+{%- assign _c4 = link_code | slice: 0,4 -%}
+{%- assign _c1 = link_code | slice: 0,1 -%}
+{%- assign _c7 = link_code | slice: 0,7 -%}
+{%- if _c4 == 'http' or _c1 == '/' or _c7 == 'mailto:' -%}{%- assign is_url_code = true -%}{%- endif -%}
+
+{%- comment -%} Kind (type): explicit > inferred from venue > 'others' {%- endcomment -%}
+{%- assign kind = p.kind | default: '' | downcase | strip -%}
+{%- if kind == '' -%}
+{%- assign v = p.venue | default: '' | downcase -%}
+{%- if v contains 'journal' or v contains 'transactions' or v contains 'letters' -%}
+{%- assign kind = 'journal' -%}
+{%- elsif v contains 'conference' or v contains 'conf.' or v contains 'icra' or v contains 'iros' or v contains 'cvpr'
+or v contains 'neurips' or v contains 'icml' or v contains 'eccv' or v contains 'iccv' or v contains 'rss' or v contains
+'aaai' or v contains 'acm' or v contains 'ieee international' or v contains 'symposium' or v contains 'workshop' -%}
+{%- assign kind = 'conference' -%}
+{%- else -%}
+{%- assign kind = 'others' -%}
+{%- endif -%}
+{%- endif -%}
+
+{%- comment -%} Press links: single URL or array (strings/objects) {%- endcomment -%}
+{%- assign press_raw = links.press -%}
+{%- assign press_json = press_raw | jsonify -%}
+{%- assign press_is_array = press_json contains '[' and press_json contains ']' -%}
+{%- assign press_count = 0 -%}
+{%- if press_is_array -%}
+{%- assign press_count = press_raw | size -%}
+{%- else -%}
+{%- assign press_single_url = '' -%}
+{%- if press_raw -%}
+{%- assign press_single_url = press_raw.url | default: press_raw | strip -%}
+{%- endif -%}
+{%- assign _u4 = press_single_url | slice: 0,4 -%}
+{%- assign _u1 = press_single_url | slice: 0,1 -%}
+{%- assign _u7 = press_single_url | slice: 0,7 -%}
+{%- if _u4 == 'http' or _u1 == '/' or _u7 == 'mailto:' -%}
+{%- assign press_count = 1 -%}
+{%- endif -%}
+{%- endif -%}
+
+<div class="pub-item" data-year="{{ p.year }}" data-selected="{{ p.selected | default: false }}"
+    data-topics="{{ topics_csv }}" data-kind="{{ kind }}">
+    {%- if has_img -%}
+    <img class="pub-thumb" src="{{ p.img | relative_url }}" alt="thumbnail">
+    {%- endif -%}
+
+    <div class="pub-info">
+        <div class="pub-title">{{ p.title }}</div>
+        <div class="pub-authors">{{ p.authors }}</div>
+        <div class="pub-venue">{{ p.venue }}</div>
+
+        <div class="pub-links">
+            {%- if is_url_paper -%}<a href="{{ link_paper }}" target="_blank" rel="noopener">Paper</a>{%- endif -%}
+            {%- if is_url_project -%}<a href="{{ link_project }}" target="_blank" rel="noopener">Project</a>{%- endif
+            -%}
+            {%- if is_url_video -%}<a href="{{ link_video }}" target="_blank" rel="noopener">Video</a>{%- endif -%}
+            {%- if is_url_slides -%}<a href="{{ link_slides }}" target="_blank" rel="noopener">Slides</a>{%- endif -%}
+            {%- if is_url_code -%}<a href="{{ link_code }}" target="_blank" rel="noopener">Code</a>{%- endif -%}
+
+            {%- if press_count > 0 -%}
+            <a href="#" class="ml-btn toggle-press" data-target="press-{{ uid }}">Press ({{ press_count }})</a>
+            {%- endif -%}
+
+            {%- if link_bibtex != '' -%}
+            <a href="#" class="ml-btn toggle-bibtex" data-target="bibtex-{{ uid }}">BibTeX</a>
+            {%- endif -%}
+        </div>
+
+        {%- if press_count > 0 -%}
+        <div id="press-{{ uid }}" class="pub-press" aria-hidden="true">
+            <ul>
+                {%- if press_is_array -%}
+                {%- for pr in press_raw -%}
+                {%- assign u = pr.url | default: pr | strip -%}
+                {%- assign _x4 = u | slice: 0,4 -%}
+                {%- assign _x1 = u | slice: 0,1 -%}
+                {%- assign _x7 = u | slice: 0,7 -%}
+                {%- if _x4 == 'http' or _x1 == '/' or _x7 == 'mailto:' -%}
+                {%- assign label = pr.title | default: pr.outlet | default: '' | strip -%}
+                {%- if label == '' -%}
+                {%- assign domain = u | replace:'https://','' | replace:'http://','' | split:'/' | first -%}
+                {%- assign label = domain -%}
+                {%- endif -%}
+                <li>
+                    <a href="{{ u }}" target="_blank" rel="noopener">{{ label }}</a>
+                    {%- if pr.date -%} <span class="press-date">— {{ pr.date }}</span>{%- endif -%}
+                </li>
+                {%- endif -%}
+                {%- endfor -%}
+                {%- else -%}
+                {%- assign u = press_single_url -%}
+                {%- assign domain = u | replace:'https://','' | replace:'http://','' | split:'/' | first -%}
+                <li><a href="{{ u }}" target="_blank" rel="noopener">{{ domain }}</a></li>
+                {%- endif -%}
+            </ul>
+        </div>
+        {%- endif -%}
+
+        {%- if link_bibtex != '' -%}
+        {%- capture bibtex_body -%}{{ links.bibtex }}{%- endcapture -%}
+        <pre id="bibtex-{{ uid }}" class="pub-bibtex" aria-hidden="true">{{ bibtex_body | escape }}</pre>
+        {%- endif -%}
+
+        <!-- PROBE: pub-item include (Slides/Code/Press; kind→{{ kind }}) -->
+    </div>
+</div>

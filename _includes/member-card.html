@@ -1,0 +1,54 @@
+<div class="member-card">
+    <div class="member-photo">
+        {% if person.img %}
+        <img src="{{ person.img | relative_url }}" alt="{{ person.name }}" loading="lazy">
+        {% else %}
+        <div class="member-placeholder" aria-label="No photo"></div>
+        {% endif %}
+    </div>
+
+    <div class="member-info">
+        <div class="member-name">{{ person.name }}</div>
+        {% if person.role %}<div class="member-role">{{ person.role }}</div>{% endif %}
+        {% if person.affiliation %}<div class="member-affiliation">{{ person.affiliation }}</div>{% endif %}
+
+        {% if person.office and person.office != "TBD" %}
+        <div class="member-office"><span class="label">Office:</span> {{ person.office }}</div>
+        {% endif %}
+        {% if person.phone and person.phone != "TBD" %}
+        <div class="member-phone"><span class="label">Phone:</span> <a
+                href="tel:{{ person.phone | replace: ' ', '' }}">{{ person.phone }}</a></div>
+        {% endif %}
+        {% if person.email %}
+        <!-- FIXED: proper <a> tag, no stray </a> -->
+        <div class="member-email"><span class="label">Email:</span> <a href="mailto:{{ person.email }}">{{ person.email
+                }}</a></div>
+        {% endif %}
+
+        <div class="member-links">
+            {% if person.website %}
+            <a class="ml-btn" href="{{ person.website }}" target="_blank" rel="noopener">Website</a>
+            {% endif %}
+            {% if person.linkedin %}
+            <a class="ml-btn" href="{{ person.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+            {% endif %}
+            {% if person.scholar %}
+            <a class="ml-btn" href="{{ person.scholar }}" target="_blank" rel="noopener">Scholar</a>
+            {% endif %}
+            {% if person.github %}
+            <a class="ml-btn" href="{{ person.github }}" target="_blank" rel="noopener">GitHub</a>
+            {% endif %}
+            {% if person.twitter %}
+            <a class="ml-btn" href="{{ person.twitter }}" target="_blank" rel="noopener">Twitter</a>
+            {% endif %}
+
+            {% if person.slug %}
+            {% assign detail = site.pages | where: "slug", person.slug | first %}
+            {% if detail %}
+            <!-- Use our class, not theme .btn -->
+            <a class="ml-btn ml-btn-ghost" href="{{ detail.url | relative_url }}">More info →</a>
+            {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</div>
