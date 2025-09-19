@@ -22,7 +22,7 @@
 
 - year: 2025
   month: 2
-  selected: False
+  selected: True
   topics: ["Wearable Robots", "Assist Robots", "Under-actuated Tendon Routing"]
   title: "Dual-Tendon Routing: Tendon Routing for Under-actuated Tendon-Driven Soft Hand-wearable Robot"
   authors: "Byungchul Kim, Useok Jeong, and Kyu-Jin Cho"
@@ -122,7 +122,7 @@
 
 - year: 2024
   month: 11
-  selected: true
+  selected: false
   kind: journal 
   topics: ["Robot Hand/Gripper", "Under-actuated Tendon Routing"]
   title: "Underactuated Robotic Gripper with Fiber-Optic Force Sensing Tendons"
@@ -143,3 +143,25 @@
         publisher={IEEE}
       }
     video: https://www.youtube.com/watch?v=m80z5AHBeTk
+
+- year: 2023
+  month: 11
+  selected: true
+  kind: conference 
+  topics: ["AI-driven-design", "Simulation", "Generative AI"]
+  title: "Diffusebot: Breeding soft robots with physics-augmented generative diffusion models"
+  authors: "Tsun-Hsuan Wang, Juntian Zheng, Pingchuan Ma, Yilun Du, Byungchul Kim, Andrew Everett Spielberg, Joshua B. Tenenbaum, Chuang Gan, and Daniela Rus"
+  venue: "Neural Information Processing Systems (NeurIPS) 2024, Oral presentation"
+  img: "/assets/img/pubs/2023_Neurips_DBOT.gif"
+  links:
+    paper: "https://bear-research-lab.github.io/assets/pub/Neurips_DBOT.pdf"
+    bibtex: |
+      @article{wang2023diffusebot,
+        title={Diffusebot: Breeding soft robots with physics-augmented generative diffusion models},
+        author={Wang, Tsun-Hsuan Johnson and Zheng, Juntian and Ma, Pingchuan and Du, Yilun and Kim, Byungchul and Spielberg, Andrew and Tenenbaum, Josh and Gan, Chuang and Rus, Daniela},
+        journal={Advances in Neural Information Processing Systems},
+        volume={36},
+        pages={44398--44423},
+        year={2023}
+      }
+    video: https://www.youtube.com/watch?v=LSzasdvD3Ss  

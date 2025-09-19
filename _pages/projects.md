@@ -13,7 +13,7 @@ One direction is enabling technology side. This includes how can we build and co
 
 ### 1.1. Computational Robot Co-Design
 <div class="project-card">
-  <img src="/assets/img/projects/codesign_robot.jpg" alt="Computational design" class="project-img"/>
+  <img src="/assets/img/projects/2023_Neurips_DBOT.gif" alt="Computational design" class="project-img"/>
   <div class="project-text">
     <h3>Computational Robot Co-Design</h3>
     <p>
@@ -33,7 +33,7 @@ Another direction is application side. This includes how can we apply robotics t
 
 ### 2.1. Assistive Robotics including Wearable Robots & Prosthetics
 <div class="project-card">
-  <img src="/assets/img/projects/wearable_robot.jpg" alt="Wearable robot" class="project-img"/>
+  <img src="/assets/img/projects/2025_SORO_EGS.png" alt="Wearable robot" class="project-img"/>
   <div class="project-text">
     <h3>Wearable Robots & Prosthetics for Rehabilitation and Assistive Applications</h3>
     <p>
