@@ -69,7 +69,7 @@
   topics: ["Generative/Datadriven", "Simulation", "Robot Body"]
   title: "Generative-AI-Driven Jumping Robot Design Using Diffusion Models"
   authors: "Byungchul Kim*, Tsun-Hsuan Wang*, Daniela Rus"
-  venue: "ICRA 2025"
+  venue: "ICRA"
   img: "/assets/img/pubs/2025_ICRA_GENJUMP.png"
   links:
     paper: "https://bear-research-lab.github.io/assets/pub/ICRA_GENJUMP.pdf"
