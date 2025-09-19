@@ -549,3 +549,12 @@ body {
     color: var(--muted);
     font-size: 12px;
 }
+
+.pub-bibtex {
+    max-width: 600px;
+    /* adjust to your liking: 400px, 500px, etc. */
+    margin: 8px auto;
+    /* auto left/right centers it */
+    font-size: 12.5px;
+    line-height: 1.45;
+}
