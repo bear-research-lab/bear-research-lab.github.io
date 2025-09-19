@@ -45,7 +45,7 @@
   month: 4
   selected: False
   topics: ["Generative/Datadriven", "Simulation", "Robot Body"]
-  title: "Dual-Tendon Routing: Tendon Routing for Under-actuated Tendon-Driven Soft Hand-wearable Robot"
+  title: "Exo-Glove Poly III: Grasp Assistance by Modulating Thumb and Finger Motion Sequence with a Single Actuator,"
   authors: "Kyu Bum Kim, Hyungmin Choi, Byungchul Kim, Brian Byunghyun Kang, Sangheui Cheon, and Kyu-Jin Cho"
   venue: "Soft Robotics"
   kind: journal 
