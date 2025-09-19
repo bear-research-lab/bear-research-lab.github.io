@@ -1,304 +1,140 @@
----
-layout: page
-title: Publications
-permalink: /publications/
----
+{%- comment -%}
+pub-item.html — renders one publication with exactly four buttons:
+Paper | BibTeX | Press* | Links*
+*Press and Links appear only if there is data.
+Expected data schema (flexible):
+links:
+paper: "https://..."
+bibtex: | # can be string or multiline block
+@inproceedings{...}
+press:
+- { title: "MIT News", url: "https://..." }
+- { title: "TechCrunch", url: "https://..." }
+# Any other keys (video, code, dataset, poster, slides, repo, demo, project, etc.)
+# are auto-rolled under "Links".
+{%- endcomment -%}
 
-<style>
-  .container-md {
-    max-width: 1800px;
-    margin: 0 auto;
-  }
+{%- assign p = include.pub -%}
+{%- assign uid = p.title | append: '-' | append: p.year | slugify -%}
+{%- assign topics_csv = p.topics | join: ',' -%}
+{%- assign links = p.links -%}
 
-  .filters {
-    margin: 10px 0 18px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+{%- comment -%} Normalize core links {%- endcomment -%}
+{%- assign link_paper = links.paper | to_s | strip -%}
+{%- assign link_bibtex = links.bibtex | to_s | strip -%}
+{%- assign has_bibtex = link_bibtex != "" -%}
 
-  .filters .mode,
-  .filters .topics,
-  .filters .types {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .filters .pill {
-    display: inline-block;
-    padding: 6px 12px;
-    border: 1px solid var(--pill-border, #d8d8d8);
-    border-radius: 999px;
-    background: var(--pill-bg, #fafafa);
-    color: var(--pill-text, #333);
-    text-decoration: none;
-    font-size: 0.9rem;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .filters .pill.is-active {
-    border-color: #007acc;
-    box-shadow: 0 0 0 2px rgba(0, 122, 204, .12);
-  }
-
-  .filters .section-title {
-    font-weight: 600;
-    margin: 12px 12px 0 0;
-  }
-
-  .filters hr {
-    width: 100%;
-    margin: 8px 0;
-  }
-
-  .pub-year {
-    margin: 18px 0 8px;
-  }
-
-  .hidden {
-    display: none !important;
-  }
-
-  /* Safety so toggles work even without site CSS */
-  .pub-bibtex[aria-hidden="true"],
-  .pub-highlights[aria-hidden="true"],
-  .pub-press[aria-hidden="true"] {
-    display: none !important;
-  }
-
-  .pub-bibtex:not([aria-hidden="true"]),
-  .pub-highlights:not([aria-hidden="true"]),
-  .pub-press:not([aria-hidden="true"]) {
-    display: block;
-  }
-</style>
-
-<p>
-  You can also find publications on
-  <a href="https://scholar.google.com/citations?user=KPQ53S0AAAAJ&hl=en">Google Scholar</a>.
-</p>
-
-{%- assign pubs = site.data.pubs -%}
-
-{%- if pubs and pubs.size > 0 -%}
-
-{%- comment -%} Build unique years (desc) {%- endcomment -%}
-{%- assign years = "" | split: "" -%}
-{%- for p in pubs -%}
-{%- unless years contains p.year -%}{%- assign years = years | push: p.year -%}{%- endunless -%}
-{%- endfor -%}
-{%- assign years = years | sort | reverse -%}
-
-<!-- Filter bar -->
-<div class="filters" id="pub-filterbar">
-  <div class="mode" role="group" aria-label="View mode">
-    <span class="section-title">View:</span>
-    <button class="pill js-mode is-active" data-mode="all">All</button>
-    <button class="pill js-mode" data-mode="selected">Selected</button>
-    <button class="pill js-mode" data-mode="by-date">By date</button>
-    <button class="pill js-mode" data-mode="by-topic">By topic</button>
-    <button class="pill js-mode" data-mode="by-type">By type</button>
-  </div>
-
-  <!-- separators start hidden -->
-  <hr id="topic-sep" class="hidden">
-  <hr id="type-sep" class="hidden">
-
-  <!-- topics bar starts hidden -->
-  <div class="topics hidden" id="topic-pills" role="group" aria-label="Topics">
-    <span class="section-title">Topics:</span>
-    <button class="pill js-topic is-active" data-topic="__all__">All topics</button>
-    <!-- Topic pills injected by JS from data-topics -->
-  </div>
-
-  <!-- types bar starts hidden -->
-  <div class="types hidden" id="type-pills" role="group" aria-label="Types">
-    <span class="section-title">Type:</span>
-    <button class="pill js-type is-active" data-type="__all__">All types</button>
-    <button class="pill js-type" data-type="journal">Journal</button>
-    <button class="pill js-type" data-type="conference">Inter. conference</button>
-    <button class="pill js-type" data-type="others">Others</button>
-  </div>
-</div>
-
-<!-- Publications grouped by year; months sorted descending inside each year -->
-<div id="pubs-root">
-  {%- for y in years -%}
-  <h2 class="pub-year" data-year-title="{{ y }}">{{ y }}</h2>
-  {%- assign year_pubs = pubs | where: "year", y | sort: "month" | reverse -%}
-  {%- for pub in year_pubs -%}
-  {%- include pub-item.html pub=pub -%}
-  {%- endfor -%}
-  {%- endfor -%}
-</div>
-
-<script>
-  (function () {
-    const root = document.getElementById('pubs-root');
-    if (!root) return;
-
-    const items = Array.from(root.querySelectorAll('.pub-item'));
-    const yearTitles = Array.from(root.querySelectorAll('[data-year-title]'));
-
-    // references for toggling the topics & types UI
-    const topicWrap = document.getElementById('topic-pills');
-    const topicSep = document.getElementById('topic-sep');
-    const typeWrap = document.getElementById('type-pills');
-    const typeSep = document.getElementById('type-sep');
-
-    // --- Build topic set from item data-topics ---
-    const topicSet = new Set();
-    items.forEach(it => {
-      const topics = (it.getAttribute('data-topics') || '')
-        .split(',')
-        .map(s => s.trim())
-        .filter(Boolean);
-      topics.forEach(t => topicSet.add(t));
-    });
-
-    // Add topic pills
-    if (topicWrap) {
-      topicSet.forEach(t => {
-        const btn = document.createElement('button');
-        btn.className = 'pill js-topic';
-        btn.textContent = t;
-        btn.dataset.topic = t;
-        topicWrap.appendChild(btn);
-      });
-    }
-
-    // Remove empty topics UI entirely
-    if (topicSet.size === 0) {
-      topicWrap?.remove();
-      topicSep?.remove();
-    }
-
-    // --- State ---
-    let mode = 'all';     // selected | by-date | by-topic | by-type | all
-    let activeTopic = '__all__';
-    let activeType = '__all__';
-
-    // --- Helpers ---
-    function hasTopic(el, topic) {
-      if (topic === '__all__') return true;
-      const topics = (el.getAttribute('data-topics') || '').split(',').map(s => s.trim());
-      return topics.includes(topic);
-    }
-
-    function hasType(el, type) {
-      if (type === '__all__') return true;
-      return (el.getAttribute('data-kind') || '').toLowerCase() === type.toLowerCase();
-    }
-
-    function applyFilters() {
-      items.forEach(el => {
-        const isSelected = (el.getAttribute('data-selected') === 'true' || el.getAttribute('data-selected') === 'True');
-        const okMode = (
-          mode === 'all' ||
-          (mode === 'selected' && isSelected) ||
-          mode === 'by-date' ||
-          (mode === 'by-topic' && hasTopic(el, activeTopic)) ||
-          mode === 'by-type'
-        );
-        const okTopic = (mode !== 'by-topic') ? true : hasTopic(el, activeTopic);
-        const okType = (mode !== 'by-type') ? true : hasType(el, activeType);
-
-        el.classList.toggle('hidden', !(okMode && okTopic && okType));
-      });
-
-      // hide year titles with no visible items beneath
-      yearTitles.forEach(h2 => {
-        const year = h2.getAttribute('data-year-title');
-        const visibleInYear = items.some(el => !el.classList.contains('hidden') &&
-          el.getAttribute('data-year') === year);
-        h2.classList.toggle('hidden', !visibleInYear);
-      });
-
-      // show/hide auxiliary bars based on mode
-      topicWrap?.classList.toggle('hidden', mode !== 'by-topic');
-      topicSep?.classList.toggle('hidden', mode !== 'by-topic');
-
-      typeWrap?.classList.toggle('hidden', mode !== 'by-type');
-      typeSep?.classList.toggle('hidden', mode !== 'by-type');
-    }
-
-    function setActive(btns, current) {
-      btns.forEach(b => b.classList.toggle('is-active', b === current));
-    }
-
-    // --- Wire mode buttons ---
-    const modeBtns = Array.from(document.querySelectorAll('.js-mode'));
-    setActive(modeBtns, modeBtns.find(m => m.dataset.mode === mode)); // initial highlight
-
-    modeBtns.forEach(b => {
-      b.addEventListener('click', () => {
-        mode = b.dataset.mode;
-        setActive(modeBtns, b);
-
-        // reset topic selection when leaving by-topic
-        if (mode !== 'by-topic') {
-          const tBtns = Array.from(document.querySelectorAll('.js-topic'));
-          const allBtn = tBtns.find(x => x.dataset.topic === '__all__');
-          if (allBtn) setActive(tBtns, allBtn);
-          activeTopic = '__all__';
-        }
-        // reset type selection when leaving by-type
-        if (mode !== 'by-type') {
-          const yBtns = Array.from(document.querySelectorAll('.js-type'));
-          const allType = yBtns.find(x => x.dataset.type === '__all__');
-          if (allType) setActive(yBtns, allType);
-          activeType = '__all__';
-        }
-
-        applyFilters();
-      });
-    });
-
-    // --- Wire topic buttons ---
-    topicWrap?.addEventListener('click', (e) => {
-      const btn = e.target.closest('.js-topic');
-      if (!btn) return;
-      activeTopic = btn.dataset.topic;
-      const tBtns = Array.from(document.querySelectorAll('.js-topic'));
-      setActive(tBtns, btn);
-      mode = 'by-topic';
-      setActive(modeBtns, modeBtns.find(m => m.dataset.mode === 'by-topic'));
-      applyFilters();
-    });
-
-    // --- Wire type buttons ---
-    typeWrap?.addEventListener('click', (e) => {
-      const btn = e.target.closest('.js-type');
-      if (!btn) return;
-      activeType = btn.dataset.type;
-      const yBtns = Array.from(document.querySelectorAll('.js-type'));
-      setActive(yBtns, btn);
-      mode = 'by-type';
-      setActive(modeBtns, modeBtns.find(m => m.dataset.mode === 'by-type'));
-      applyFilters();
-    });
-
-    // Initial render
-    applyFilters();
-
-    // --- BibTeX / Highlights / Press toggle ---
-    document.addEventListener('click', (e) => {
-      const t = e.target;
-      if (t.matches('.toggle-bibtex') || t.matches('.toggle-highlights') || t.matches('.toggle-press')) {
-        e.preventDefault();
-        const id = t.getAttribute('data-target');
-        const el = document.getElementById(id);
-        if (el) {
-          const isHidden = el.getAttribute('aria-hidden') === 'true';
-          el.setAttribute('aria-hidden', isHidden ? 'false' : 'true');
-        }
-      }
-    });
-  })();
-</script>
-
-{%- else -%}
-<p>No publications available yet.</p>
+{%- comment -%} Press can be a string OR a list [{title,url}] {%- endcomment -%}
+{%- assign has_press = false -%}
+{%- if links.press -%}
+{%- if links.press.first and links.press.first.title -%}
+{%- assign has_press = true -%}
+{%- elsif links.press contains 'http' -%}
+{%- assign has_press = true -%}
 {%- endif -%}
+{%- endif -%}
+
+{%- comment -%}
+Collect “extras” (unknown link keys) for the Links drawer.
+Keys treated as “known”: paper, bibtex, press.
+Everything else under links.* becomes a Links item.
+Supports:
+- Scalar string URL -> label is the key name (title-cased)
+- Object {title, url}
+- List of either form
+{%- endcomment -%}
+{%- assign known = "paper|bibtex|press" | split:"|" -%}
+{%- assign extras_exist = false -%}
+
+{%- capture extras_html -%}
+<ul class="pub-links-list">
+  {%- for kv in links -%}
+  {%- assign k = kv[0] | to_s | strip -%}
+  {%- assign v = kv[1] -%}
+  {%- unless known contains k -%}
+  {%- assign extras_exist = true -%}
+  {%- if v contains 'http' and v.size > 0 and v.first == nil -%}
+  <li><a href="{{ v }}" target="_blank" rel="noopener">{{ k | replace: '_',' ' | replace: '-',' ' | capitalize }}</a>
+  </li>
+  {%- elsif v.first and v.first.title -%}
+  {%- for it in v -%}
+  <li><a href="{{ it.url }}" target="_blank" rel="noopener">{{ it.title }}</a></li>
+  {%- endfor -%}
+  {%- elsif v.first and v.first contains 'http' -%}
+  {%- for it in v -%}
+  <li><a href="{{ it }}" target="_blank" rel="noopener">{{ k | replace: '_',' ' | replace: '-',' ' | capitalize }} {{
+      forloop.index }}</a></li>
+  {%- endfor -%}
+  {%- elsif v.url -%}
+  <li><a href="{{ v.url }}" target="_blank" rel="noopener">{{ v.title | default: k | capitalize }}</a></li>
+  {%- endif -%}
+  {%- endunless -%}
+  {%- endfor -%}
+</ul>
+{%- endcapture -%}
+
+<div class="pub-item" data-year="{{ p.year }}" data-topics="{{ topics_csv }}"
+  data-kind="{{ p.kind | downcase | default: 'others' }}" data-selected="{{ p.selected | default: false }}">
+
+  {%- if p.img -%}
+  <img class="pub-thumb" src="{{ p.img | relative_url }}" alt="{{ p.title | escape }}">
+  {%- endif -%}
+
+  <div class="pub-body">
+    <div class="pub-headline">
+      <div class="pub-title"><strong>{{ p.title }}</strong></div>
+      <div class="pub-authors">{{ p.authors }}</div>
+      <div class="pub-venue">
+        {%- if p.venue -%}{{ p.venue }}{%- endif -%}
+        {%- if p.month or p.year -%}
+        {%- if p.venue -%}, {% endif -%}
+        {%- if p.month -%}{{ p.month }} {%- endif -%}{{ p.year }}
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="pub-actions" style="margin-top:8px; display:flex; flex-wrap:wrap; gap:8px;">
+      {%- if link_paper != "" -%}
+      <a class="pub-btn" href="{{ link_paper }}" target="_blank" rel="noopener">Paper</a>
+      {%- endif -%}
+
+      {%- if has_bibtex -%}
+      <a class="pub-btn toggle-bibtex" href="#" data-target="bibtex-{{ uid }}">BibTeX</a>
+      {%- endif -%}
+
+      {%- if has_press -%}
+      <a class="pub-btn toggle-press" href="#" data-target="press-{{ uid }}">Press</a>
+      {%- endif -%}
+
+      {%- if extras_html contains '<li>' -%}
+        <a class="pub-btn toggle-links" href="#" data-target="links-{{ uid }}">Links</a>
+        {%- endif -%}
+    </div>
+
+    {%- if has_bibtex -%}
+    <div id="bibtex-{{ uid }}" class="pub-bibtex" aria-hidden="true" style="margin-top:8px;">
+      <pre style="white-space:pre-wrap;"><code>{{ link_bibtex }}</code></pre>
+    </div>
+    {%- endif -%}
+
+    {%- if has_press -%}
+    <div id="press-{{ uid }}" class="pub-press" aria-hidden="true" style="margin-top:8px;">
+      <ul class="pub-press-list">
+        {%- if links.press.first and links.press.first.title -%}
+        {%- for pr in links.press -%}
+        <li><a href="{{ pr.url }}" target="_blank" rel="noopener">{{ pr.title }}</a></li>
+        {%- endfor -%}
+        {%- else -%}
+        <li><a href="{{ links.press }}" target="_blank" rel="noopener">Press</a></li>
+        {%- endif -%}
+      </ul>
+    </div>
+    {%- endif -%}
+
+    {%- if extras_html contains '<li>' -%}
+      <div id="links-{{ uid }}" class="pub-links" aria-hidden="true" style="margin-top:8px;">
+        {{ extras_html }}
+      </div>
+      {%- endif -%}
+  </div>
+</div>

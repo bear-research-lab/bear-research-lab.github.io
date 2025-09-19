@@ -9,7 +9,6 @@
   img: "/assets/img/pubs/2025_RAL_CTR.png"
   links:
     paper: "https://bear-research-lab.github.io/assets/pub/RAL_CTR.pdf"
-    project: "https://sites.google.com/view/constrained-tendon-routings"
     bibtex: |
       @article{kim2025exo,
         title={Exo-Glove Pinch: A Soft, Hand-Wearable Robot Designed Through Constrained Tendon Routing Analysis},
@@ -18,6 +17,7 @@
         year={2025},
         publisher={IEEE}
       }
+    project: "https://sites.google.com/view/constrained-tendon-routings"
 
 - year: 2025
   month: 2
@@ -30,7 +30,6 @@
   img: "/assets/img/pubs/2025_RAL_DTR.png"
   links:
     paper: "https://bear-research-lab.github.io/assets/pub/RAL_DTR.pdf"
-    project: "https://sites.google.com/view/constrained-tendon-routings"
     bibtex: |
       @article{kim2025dual,
         title={Dual-tendon routing: Tendon routing for under-actuated tendon-driven soft hand-wearable robot},
@@ -39,6 +38,7 @@
         year={2025},
         publisher={IEEE}
       }
+    project: "https://sites.google.com/view/constrained-tendon-routings"
     video: "https://www.youtube.com/watch?v=8iz3lKWT_M8"
 
 - year: 2025
@@ -81,20 +81,13 @@
         year={2025},
         publisher={IEEE}
       }
-    video: "https://www.youtube.com/watch?v=seLBEMrhMjI"
     press:
-    - url: "https://www.csail.mit.edu/news/using-generative-ai-help-robots-jump-higher-and-land-better"
-      outlet: "MIT CSAIL"
-      date: "2024-12-18"
-    - url: "https://www.technologyreview.kr/%EC%9D%B4-%EC%A0%90%ED%94%84-%EB%A1%9C%EB%B4%87%EC%9D%80-ai%EA%B0%80-%EC%84%A4%EA%B3%84%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4-mit%EC%9D%98-%EA%B9%80%EB%B3%91%EC%B2%A0/"
-      outlet: "MIT Technology Review (Korea)"
-      date: "2025-05-21"
-    - url: "https://news.mit.edu/2025/using-generative-ai-help-robots-jump-higher-land-safely-0627"
-      outlet: "MIT News"
-      date: "2025-06-27"
-    - url: "https://www.youtube.com/watch?v=dI1J4aPcbmc"
-      outlet: "MIT CSAIL Youtube"
-      date: "2025-06-30"
+    - {outlet: "MIT CSAIL", url: "https://www.csail.mit.edu/news/using-generative-ai-help-robots-jump-higher-and-land-better"}
+    - {outlet: "MIT Technology Review (Korea)", url: "https://www.technologyreview.kr/%EC%9D%B4-%EC%A0%90%ED%94%84-%EB%A1%9C%EB%B4%87%EC%9D%80-ai%EA%B0%80-%EC%84%A4%EA%B3%84%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4-mit%EC%9D%98-%EA%B9%80%EB%B3%91%EC%B2%A0/"}
+    - {outlet: "MIT News", url: "https://news.mit.edu/2025/using-generative-ai-help-robots-jump-higher-land-safely-0627"}
+    - {outlet: "MIT CSAIL Youtube", url: "https://www.youtube.com/watch?v=dI1J4aPcbmc", date: "2025-06-30"}
+    video: "https://www.youtube.com/watch?v=seLBEMrhMjI"
+
 
 - year: 2024
   month: 11
