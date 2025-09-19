@@ -86,9 +86,8 @@ Supports:
             <div class="pub-authors">{{ p.authors }}</div>
             <div class="pub-venue">
                 {%- if p.venue -%}{{ p.venue }}{%- endif -%}
-                {%- if p.month or p.year -%}
+                {%- if p.year -%}
                 {%- if p.venue -%}, {% endif -%}
-                {%- if p.month -%}{{ p.month }} {%- endif -%}{{ p.year }}
                 {%- endif -%}
             </div>
         </div>
