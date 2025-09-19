@@ -6,6 +6,8 @@ permalink: /projects/
 
 We are making advances in robotics through two directional approaches: (1) [enabling technology](#category-1-enabling-technology) and (2) [application](#category-2-application).
 
+---
+
 ### Category 1. Enabling Technology
 One direction is enabling technology side. This includes how can we build and control robots more systematically and efficiently. This means that, we are focusing on **methods** rather than **specific robots**. From this perspective, we will build a framework that builds with minimized human effort, using computational approaches including AI, optimization, and simulation.
 
