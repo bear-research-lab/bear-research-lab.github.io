@@ -97,7 +97,7 @@
   title: "Underactuated Robotic Gripper with Fiber-Optic Force Sensing Tendons"
   authors: "Jaehyun Lee, Byungchul Kim, Kyu-Jin Cho, and Yong-Lae Park"
   venue: "IEEE Robotics and Automation Letters (RA-L)"
-  img: "/assets/img/pubs/2025_ICRA_GENJUMP.png"
+  img: "/assets/img/pubs/2024_RAL_FBG.png"
   links:
     paper: "https://bear-research-lab.github.io/assets/pub/RAL_FBG.pdf"
     bibtex: |
