@@ -17,7 +17,7 @@
         year={2025},
         publisher={IEEE}
       }
-    project: "https://sites.google.com/view/constrained-tendon-routings"
+    project-website: "https://sites.google.com/view/constrained-tendon-routings"
 
 - year: 2025
   month: 2
@@ -38,8 +38,8 @@
         year={2025},
         publisher={IEEE}
       }
-    project: "https://sites.google.com/view/constrained-tendon-routings"
-    video: "https://www.youtube.com/watch?v=8iz3lKWT_M8"
+    project-website: "https://sites.google.com/view/dt-routing/overview"
+    video: "https://www.youtube.com/watch?v=3sa5VhzjjoU"
 
 - year: 2025
   month: 4
@@ -60,7 +60,7 @@
         year={2025},
         publisher={IEEE}
       }
-    video: "https://www.youtube.com/watch?v=8iz3lKWT_M8"
+    video: "https://www.youtube.com/watch?v=XG7Zscma3a4"
 
 - year: 2025
   month: 5
@@ -86,7 +86,7 @@
     - {title: "MIT Technology Review (Korea)", url: "https://www.technologyreview.kr/%EC%9D%B4-%EC%A0%90%ED%94%84-%EB%A1%9C%EB%B4%87%EC%9D%80-ai%EA%B0%80-%EC%84%A4%EA%B3%84%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4-mit%EC%9D%98-%EA%B9%80%EB%B3%91%EC%B2%A0/"}
     - {title: "MIT News", url: "https://news.mit.edu/2025/using-generative-ai-help-robots-jump-higher-land-safely-0627"}
     - {title: "MIT CSAIL Youtube", url: "https://www.youtube.com/watch?v=dI1J4aPcbmc", date: "2025-06-30"}
-    video: "https://www.youtube.com/watch?v=seLBEMrhMjI"
+    video: "https://www.youtube.com/watch?v=g7mGls8oHj4"
 
 
 - year: 2024
@@ -111,3 +111,4 @@
         year={2023},
         publisher={IEEE}
       }
+    video: https://www.youtube.com/watch?v=m80z5AHBeTk
