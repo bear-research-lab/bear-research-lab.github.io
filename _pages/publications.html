@@ -95,16 +95,17 @@ permalink: /publications/
   {%- comment -%} Collect in-prep items {%- endcomment -%}
   {%- assign inprep = pubs | where: "status", "in-prep" -%}
 
-  {%- comment -%} Build unique years (desc), skipping in-prep {%- endcomment -%}
-  {%- assign years = "" | split: "" -%}
-  {%- for p in pubs -%}
-  {%- if p.status != "in-prep" and p.year -%}
-  {%- unless years contains p.year -%}
-  {%- assign years = years | push: p.year -%}
-  {%- endunless -%}
-  {%- endif -%}
-  {%- endfor -%}
-  {%- assign years = years | sort | reverse -%}
+  {%- comment -%}
+  Build unique years (descending) from items that are NOT in-prep and HAVE year.
+  Using map->uniq->sort avoids NilClass comparisons.
+  {%- endcomment -%}
+  {%- assign years = pubs
+  | where_exp: "p", "p.status != 'in-prep' and p.year"
+  | map: "year"
+  | uniq
+  | sort
+  | reverse
+  -%}
 
   <!-- Filter bar -->
   <div class="filters" id="pub-filterbar">
@@ -152,10 +153,21 @@ permalink: /publications/
     {%- comment -%} Year-by-year blocks (excluding in-prep) {%- endcomment -%}
     {%- for y in years -%}
     <h2 class="pub-year" data-year-title="{{ y }}">{{ y }}</h2>
+
     {%- assign year_pubs = pubs | where: "year", y -%}
     {%- assign year_pubs = year_pubs | where_exp: "p", "p.status != 'in-prep'" -%}
-    {%- assign year_pubs = year_pubs | sort: "month" | reverse -%}
-    {%- for pub in year_pubs -%}
+
+    {%- comment -%}
+    Sort safely by month: first those WITH month (sorted desc),
+    then append those WITHOUT month (original order).
+    {%- endcomment -%}
+    {%- assign with_month = year_pubs | where_exp: "p", "p.month" | sort: "month" | reverse -%}
+    {%- assign without_month = year_pubs | where_exp: "p", "p.month == nil or p.month == ''" -%}
+
+    {%- for pub in with_month -%}
+    {%- include pub-item.html pub=pub -%}
+    {%- endfor -%}
+    {%- for pub in without_month -%}
     {%- include pub-item.html pub=pub -%}
     {%- endfor -%}
     {%- endfor -%}
@@ -233,7 +245,6 @@ permalink: /publications/
             !el.classList.contains('hidden') &&
             el.getAttribute('data-year') === year
           );
-          // For "In preparation", there is no data-year on items; keep header visible if any in-prep items exist & visible.
           if (year === 'In preparation') {
             const anyInPrepVisible = items.some(el =>
               !el.classList.contains('hidden') &&
