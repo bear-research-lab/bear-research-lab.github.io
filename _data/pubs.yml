@@ -179,13 +179,13 @@
     paper: "https://bear-research-lab.github.io/assets/pub/TMECH_STLA.pdf"
     bibtex: |
       @article{kim2021slider,
-      title={Slider-tendon linear actuator with under-actuation and fast-connection for soft wearable robots},
-      author={Kim, Byungchul and Jeong, Useok and Kang, Brian Byunghyun and Cho, Kyu-Jin},
-      journal={IEEE/ASME Transactions on Mechatronics},
-      volume={26},
-      number={6},
-      pages={2932--2943},
-      year={2021},
-      publisher={IEEE}
-    }
+        title={Slider-tendon linear actuator with under-actuation and fast-connection for soft wearable robots},
+        author={Kim, Byungchul and Jeong, Useok and Kang, Brian Byunghyun and Cho, Kyu-Jin},
+        journal={IEEE/ASME Transactions on Mechatronics},
+        volume={26},
+        number={6},
+        pages={2932--2943},
+        year={2021},
+        publisher={IEEE}
+      }
     video: https://youtu.be/BQsyxZ3xNZc
