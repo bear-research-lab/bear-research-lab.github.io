@@ -1,7 +1,7 @@
 - year: 2025
   month: 10
   selected: true
-  topics: ["Wearable Robots", "Assist Robots", "Under-actuated Tendon Routing"]
+  topics: ["Assist Robots", "Under-actuated Tendon Routing"]
   title: "Exo-Glove Pinch: Soft Hand-wearable Robot Designed through the Analysis of the Constrained Tendon Routing"
   authors: "Byungchul Kim, Useok Jeong, and Kyu-Jin Cho"
   venue: "IEEE Robotics and Automation Letters (RA-L)"
@@ -18,12 +18,12 @@
         publisher={IEEE}
       }
     project-website: "https://sites.google.com/view/constrained-tendon-routings"
-    Supplementary: "https://bear-research-lab.github.io/assets/pub/RAL_CTR_SM.pdf"
+    supplementary "https://bear-research-lab.github.io/assets/pub/RAL_CTR_SM.pdf"
 
 - year: 2025
   month: 2
   selected: True
-  topics: ["Wearable Robots", "Assist Robots", "Under-actuated Tendon Routing"]
+  topics: ["Assist Robots", "Under-actuated Tendon Routing"]
   title: "Dual-Tendon Routing: Tendon Routing for Under-actuated Tendon-Driven Soft Hand-wearable Robot"
   authors: "Byungchul Kim, Useok Jeong, and Kyu-Jin Cho"
   venue: "IEEE Robotics and Automation Letters (RA-L)"
@@ -41,12 +41,12 @@
       }
     project-website: "https://sites.google.com/view/dt-routing/overview"
     video: "https://www.youtube.com/watch?v=3sa5VhzjjoU"
-    Supplementary: "https://bear-research-lab.github.io/assets/pub/RAL_DTR_SM.pdf"
+    supplementary "https://bear-research-lab.github.io/assets/pub/RAL_DTR_SM.pdf"
 
 - year: 2025
   month: 2
   selected: True
-  topics: ["Wearable Robots", "Assist Robots", "Under-actuated Tendon Routing"]
+  topics: ["Assist Robots", "Under-actuated Tendon Routing"]
   title: "Exo-Glove Shell: A Hybrid Exo-Glove for the Thumb Opposition with an Under-Actuated Tendon-Driven System,"
   authors: "Byungchul Kim, Hyungmin Choi, Kyubum Kim, Sejin Jeong, and Kyu-Jin Cho"
   venue: "Soft Robotics"
@@ -65,15 +65,15 @@
         year={2025},
         publisher={Mary Ann Liebert, Inc., publishers 140 Huguenot Street, 3rd Floor New~…}
       }
-    video: "https://youtu.be/gfiMNtUlHK4"
-    Supplementary: "https://bear-research-lab.github.io/assets/pub/SORO_EGS_SM.pdf"
     project-website: "https://sites.google.com/view/exo-gloveshell/"
+    supplementary "https://bear-research-lab.github.io/assets/pub/SORO_EGS_SM.pdf"
+    video: "https://youtu.be/gfiMNtUlHK4"
 
 
 - year: 2025
   month: 4
   selected: False
-  topics: ["Wearable Robots", "Assist Robots", "Under-actuated Tendon Routing"]
+  topics: ["Assist Robots", "Under-actuated Tendon Routing"]
   title: "Exo-Glove Poly III: Grasp Assistance by Modulating Thumb and Finger Motion Sequence with a Single Actuator,"
   authors: "Kyu Bum Kim, Hyungmin Choi, Byungchul Kim, Brian Byunghyun Kang, Sangheui Cheon, and Kyu-Jin Cho"
   venue: "Soft Robotics"
@@ -89,15 +89,15 @@
         year={2025},
         publisher={Mary Ann Liebert, Inc., publishers 140 Huguenot Street, 3rd Floor New~…}
       }
+    supplementary "https://bear-research-lab.github.io/assets/pub/SORO_EP3_SM.pdf"
     video: "https://www.youtube.com/watch?v=XG7Zscma3a4"
-    Supplementary: "https://bear-research-lab.github.io/assets/pub/SORO_EP3_SM.pdf"
 
 
 - year: 2025
   month: 5
   selected: True
   kind: conference
-  topics: ["AI-driven-design", "Simulation", "Generative AI"]
+  topics: ["Locomotive Robots","AI-driven-design", "Generative AI"]
   title: "Generative-AI-Driven Jumping Robot Design Using Diffusion Models"
   authors: "Byungchul Kim*, Tsun-Hsuan Wang*, Daniela Rus"
   venue: "ICRA 2025"
@@ -116,7 +116,7 @@
     - {title: "MIT CSAIL", url: "https://www.csail.mit.edu/news/using-generative-ai-help-robots-jump-higher-and-land-better"}
     - {title: "MIT Technology Review (Korea)", url: "https://www.technologyreview.kr/%EC%9D%B4-%EC%A0%90%ED%94%84-%EB%A1%9C%EB%B4%87%EC%9D%80-ai%EA%B0%80-%EC%84%A4%EA%B3%84%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4-mit%EC%9D%98-%EA%B9%80%EB%B3%91%EC%B2%A0/"}
     - {title: "MIT News", url: "https://news.mit.edu/2025/using-generative-ai-help-robots-jump-higher-land-safely-0627"}
-    - {title: "MIT CSAIL Youtube", url: "https://www.youtube.com/watch?v=dI1J4aPcbmc", date: "2025-06-30"}
+    - {title: "MIT CSAIL Youtube", url: "https://www.youtube.com/watch?v=dI1J4aPcbmc"}
     video: "https://www.youtube.com/watch?v=g7mGls8oHj4"
 
 
@@ -148,7 +148,7 @@
   month: 11
   selected: true
   kind: conference 
-  topics: ["AI-driven-design", "Simulation", "Generative AI"]
+  topics: ["Other Robots", "AI-driven-design", "Generative AI"]
   title: "Diffusebot: Breeding soft robots with physics-augmented generative diffusion models"
   authors: "Tsun-Hsuan Wang, Juntian Zheng, Pingchuan Ma, Yilun Du, Byungchul Kim, Andrew Everett Spielberg, Joshua B. Tenenbaum, Chuang Gan, and Daniela Rus"
   venue: "Neural Information Processing Systems (NeurIPS) 2024, Oral presentation"
