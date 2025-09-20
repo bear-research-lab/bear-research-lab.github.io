@@ -97,7 +97,7 @@
   month: 5
   selected: True
   kind: conference
-  topics: ["Locomotive Robots","AI-driven-design", "Generative AI"]
+  topics: ["Locomotive Robots","AI-driven-design"]
   title: "Generative-AI-Driven Jumping Robot Design Using Diffusion Models"
   authors: "Byungchul Kim*, Tsun-Hsuan Wang*, Daniela Rus"
   venue: "ICRA 2025"
@@ -148,7 +148,7 @@
   month: 11
   selected: true
   kind: conference 
-  topics: ["Other Robots", "AI-driven-design", "Generative AI"]
+  topics: ["Other Robots", "AI-driven-design"]
   title: "Diffusebot: Breeding soft robots with physics-augmented generative diffusion models"
   authors: "Tsun-Hsuan Wang, Juntian Zheng, Pingchuan Ma, Yilun Du, Byungchul Kim, Andrew Everett Spielberg, Joshua B. Tenenbaum, Chuang Gan, and Daniela Rus"
   venue: "Neural Information Processing Systems (NeurIPS) 2024, Oral presentation"
