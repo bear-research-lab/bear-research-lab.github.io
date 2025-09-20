@@ -1,3 +1,25 @@
+- year:
+  month:
+  selected: true
+  topics: ["Wearable Robots"]
+  title: "Genesis: A Generative and Universal Physics Engine for Robotics and Beyond,"
+  authors: "Zhou Xian, Yiling Qiao, […] Byungchul Kim, […] and Chuang Gan (among 51 authors)"
+  venue: ""
+  kind: others
+  status: in-prep
+  img: "IP_GENESIS.png"
+  links:
+    paper: https://genesis-embodied-ai.github.io/
+    bibtex: |
+      @software{Genesis,
+        author = {Genesis Authors},
+        title = {Genesis: A Universal and Generative Physics Engine for Robotics and Beyond},
+        month = {December},
+        year = {2024},
+        url = {https://github.com/Genesis-Embodied-AI/Genesis}
+      }
+  project-website: "https://genesis-embodied-ai.github.io/"
+
 - year: 2025
   month: 10
   selected: True

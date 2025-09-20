@@ -8,8 +8,8 @@ permalink: /publications/
 
   <style>
     /* =======================
-       Publications Section (scoped)
-       ======================= */
+   Publications Section (scoped)
+   ======================= */
 
     #pubs-page .container-md {
       max-width: 1800px;
@@ -92,17 +92,10 @@ permalink: /publications/
 
   {%- if pubs and pubs.size > 0 -%}
 
-  {%- comment -%} Collect in-prep items {%- endcomment -%}
-  {%- assign inprep = pubs | where: "status", "in-prep" -%}
-
-  {%- comment -%} Build unique years (desc), skipping in-prep {%- endcomment -%}
+  {%- comment -%} Build unique years (desc) {%- endcomment -%}
   {%- assign years = "" | split: "" -%}
   {%- for p in pubs -%}
-  {%- if p.status != "in-prep" and p.year -%}
-  {%- unless years contains p.year -%}
-  {%- assign years = years | push: p.year -%}
-  {%- endunless -%}
-  {%- endif -%}
+  {%- unless years contains p.year -%}{%- assign years = years | push: p.year -%}{%- endunless -%}
   {%- endfor -%}
   {%- assign years = years | sort | reverse -%}
 
@@ -138,23 +131,11 @@ permalink: /publications/
     </div>
   </div>
 
-  <!-- Publications root -->
+  <!-- Publications grouped by year -->
   <div id="pubs-root">
-
-    {%- comment -%} In preparation block at the very top {%- endcomment -%}
-    {%- if inprep and inprep.size > 0 -%}
-    <h2 class="pub-year" data-year-title="In preparation">In preparation</h2>
-    {%- for pub in inprep -%}
-    {%- include pub-item.html pub=pub -%}
-    {%- endfor -%}
-    {%- endif -%}
-
-    {%- comment -%} Year-by-year blocks (excluding in-prep) {%- endcomment -%}
     {%- for y in years -%}
     <h2 class="pub-year" data-year-title="{{ y }}">{{ y }}</h2>
-    {%- assign year_pubs = pubs | where: "year", y -%}
-    {%- assign year_pubs = year_pubs | where_exp: "p", "p.status != 'in-prep'" -%}
-    {%- assign year_pubs = year_pubs | sort: "month" | reverse -%}
+    {%- assign year_pubs = pubs | where: "year", y | sort: "month" | reverse -%}
     {%- for pub in year_pubs -%}
     {%- include pub-item.html pub=pub -%}
     {%- endfor -%}
@@ -229,20 +210,9 @@ permalink: /publications/
 
         yearTitles.forEach(h2 => {
           const year = h2.getAttribute('data-year-title');
-          const visibleInYear = items.some(el =>
-            !el.classList.contains('hidden') &&
-            el.getAttribute('data-year') === year
-          );
-          // For "In preparation", there is no data-year on items; keep header visible if any in-prep items exist & visible.
-          if (year === 'In preparation') {
-            const anyInPrepVisible = items.some(el =>
-              !el.classList.contains('hidden') &&
-              (el.getAttribute('data-year') === null || el.getAttribute('data-year') === '' || !el.hasAttribute('data-year'))
-            );
-            h2.classList.toggle('hidden', !anyInPrepVisible);
-          } else {
-            h2.classList.toggle('hidden', !visibleInYear);
-          }
+          const visibleInYear = items.some(el => !el.classList.contains('hidden') &&
+            el.getAttribute('data-year') === year);
+          h2.classList.toggle('hidden', !visibleInYear);
         });
 
         topicWrap?.classList.toggle('hidden', mode !== 'by-topic');
@@ -305,12 +275,7 @@ permalink: /publications/
 
       document.addEventListener('click', (e) => {
         const t = e.target;
-        if (
-          t.matches('.toggle-bibtex') ||
-          t.matches('.toggle-highlights') ||
-          t.matches('.toggle-press') ||
-          t.matches('.toggle-links')
-        ) {
+        if (t.matches('.toggle-bibtex') || t.matches('.toggle-highlights') || t.matches('.toggle-press') || t.matches('.toggle-links')) {
           e.preventDefault();
           const id = t.getAttribute('data-target');
           const el = document.getElementById(id);
