@@ -103,7 +103,7 @@
   venue: "ICRA 2025"
   img: "/assets/img/pubs/2025_ICRA_GENJUMP.png"
   links:
-    paper: "https://bear-research-lab.github.io/assets/pub/ICRA_GENJUMP.pdf"
+    paper: "https://bear-research-lab.github.io/assets/pub/2025_ICRA_GENJUMP.pdf"
     bibtex: |
       @article{kim2025genjump,
         title={Generative-AI-Driven Jumping Robot Design Using Diffusion Models},
@@ -119,6 +119,47 @@
       - {title: "MIT CSAIL Youtube", url: "https://www.youtube.com/watch?v=dI1J4aPcbmc"}
     video: "https://www.youtube.com/watch?v=g7mGls8oHj4"
 
+- year: 2025
+  month: 5
+  selected: False
+  kind: others
+  topics: ["Locomotive Robots","AI-driven-design"]
+  title: "Position and Force Constraints in Underactuated Tendon-Driven Systems"
+  authors: "Byungchul Kim*, Useok Jeong, Kyu-Jin Cho"
+  venue: "ICRA 2025 Workshop on Mechanisms in Robot Manipulation"
+  img: "/assets/img/pubs/2025_ICRA_WS.png"
+  links:
+    paper: "https://bear-research-lab.github.io/assets/pub/2025_ICRA_WS.pdf"
+    bibtex: |
+      @article{kim2025constraints,
+        title={Position and Force Constraints in Underactuated Tendon-Driven Systems},
+        author={Kim, Byungchul and Jeong, Useok and Cho, Kyu-Jin},
+        journal={ICRA 2025 Workshop on Mechanisms in Robot Manipulation},
+        year={2025},
+        publisher={IEEE}
+      }
+    Workshop-website: "https://2025.ieee-icra.org/event/workshop-on-mechanisms-in-robot-manipulation-challenges-and-new-opportunities/"
+
+- year: 2024
+  month: 11
+  selected: false
+  kind: conference
+  topics: ["Robot Hand/Gripper", "Under-actuated Tendon Routing"]
+  title: "Strong Compliant Grasps Using a Cable-Driven Soft Gripper"
+  authors: "Gregory Xie, Lillian Chin, Byungchul Kim, Rachel Holladay, and Daniela Rus"
+  venue: "IEEE Robotics and Automation Letters (RA-L)"
+  img: "/assets/img/pubs/2024_IROS_GRIPPER.png"
+  links:
+    paper: "https://bear-research-lab.github.io/assets/pub/2024_IROS_GRIPPER.pdf"
+    bibtex: |
+      @inproceedings{xie2024strong,
+        title={Strong compliant grasps using a cable-driven soft gripper},
+        author={Xie, Gregory and Chin, Lillian and Kim, Byungchul and Holladay, Rachel and Rus, Daniela},
+        booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+        pages={8696--8703},
+        year={2024},
+        organization={IEEE}
+      }
 
 - year: 2024
   month: 11
@@ -143,6 +184,7 @@
         publisher={IEEE}
       }
     video: https://www.youtube.com/watch?v=m80z5AHBeTk
+
 
 - year: 2023
   month: 11
