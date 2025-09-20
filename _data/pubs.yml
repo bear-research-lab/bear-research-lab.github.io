@@ -9,7 +9,6 @@
   status: in-prep
   img: "/assets/img/pubs/IP_GENESIS.png"
   links:
-    paper: https://genesis-embodied-ai.github.io/
     bibtex: |
       @software{Genesis,
         author = {Genesis Authors},
