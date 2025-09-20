@@ -165,3 +165,27 @@
         year={2023}
       }
     video: https://www.youtube.com/watch?v=LSzasdvD3Ss  
+
+- year: 2021
+  month: 12
+  selected: true
+  kind: journal
+  topics: ["Assist Robots", "Under-actuated Tendon Routing"]
+  title: "Slider-Tendon Linear Actuator with Under-actuation and Fast-connection for Soft Wearable Robots "
+  authors: "Byungchul Kim, Useok Jeong, Brian Byunghyun Kang, and Kyu-Jin Cho"
+  venue: "IEEE/ASME Transactions on Mechatronics"
+  img: "/assets/img/pubs/2021_TMECH_STLA.png"
+  links:
+    paper: "https://bear-research-lab.github.io/assets/pub/TMECH_STLA.pdf"
+    bibtex: |
+      @article{kim2021slider,
+      title={Slider-tendon linear actuator with under-actuation and fast-connection for soft wearable robots},
+      author={Kim, Byungchul and Jeong, Useok and Kang, Brian Byunghyun and Cho, Kyu-Jin},
+      journal={IEEE/ASME Transactions on Mechatronics},
+      volume={26},
+      number={6},
+      pages={2932--2943},
+      year={2021},
+      publisher={IEEE}
+    }
+    video: https://youtu.be/BQsyxZ3xNZc
