@@ -67,7 +67,7 @@ permalink: /publications/
       display: none !important;
     }
 
-    /* Safety so toggles work even without site CSS */
+    /* Toggle safety even without site CSS */
     #pubs-page .pub-bibtex[aria-hidden="true"],
     #pubs-page .pub-highlights[aria-hidden="true"],
     #pubs-page .pub-press[aria-hidden="true"],
@@ -92,20 +92,27 @@ permalink: /publications/
 
   {%- if pubs and pubs.size > 0 -%}
 
-  {%- comment -%} Collect in-prep items {%- endcomment -%}
-  {%- assign inprep = pubs | where: "status", "in-prep" -%}
+  {%- comment -%} In-prep first {%- endcomment -%}
+  {%- assign inprep = "" | split: "" -%}
+  {%- for p in pubs -%}
+  {%- if p.status == "in-prep" -%}
+  {%- assign inprep = inprep | push: p -%}
+  {%- endif -%}
+  {%- endfor -%}
 
   {%- comment -%}
-  Build unique years (descending) from items that are NOT in-prep and HAVE year.
-  Using map->uniq->sort avoids NilClass comparisons.
+  Build unique years from items that are NOT in-prep and HAVE a non-empty year.
+  Done without where_exp to avoid Liquid parser issues.
   {%- endcomment -%}
-  {%- assign years = pubs
-  | where_exp: "p", "p.status != 'in-prep' and p.year"
-  | map: "year"
-  | uniq
-  | sort
-  | reverse
-  -%}
+  {%- assign years = "" | split: "" -%}
+  {%- for p in pubs -%}
+  {%- if p.status != "in-prep" and p.year and p.year != "" -%}
+  {%- unless years contains p.year -%}
+  {%- assign years = years | push: p.year -%}
+  {%- endunless -%}
+  {%- endif -%}
+  {%- endfor -%}
+  {%- assign years = years | sort_natural | reverse -%}
 
   <!-- Filter bar -->
   <div class="filters" id="pub-filterbar">
@@ -118,18 +125,14 @@ permalink: /publications/
       <button class="pill js-mode" data-mode="by-type">By type</button>
     </div>
 
-    <!-- separators start hidden -->
     <hr id="topic-sep" class="hidden">
     <hr id="type-sep" class="hidden">
 
-    <!-- topics bar starts hidden -->
     <div class="topics hidden" id="topic-pills" role="group" aria-label="Topics">
       <span class="section-title">Topics:</span>
       <button class="pill js-topic is-active" data-topic="__all__">All topics</button>
-      <!-- Topic pills injected by JS from data-topics -->
     </div>
 
-    <!-- types bar starts hidden -->
     <div class="types hidden" id="type-pills" role="group" aria-label="Types">
       <span class="section-title">Type:</span>
       <button class="pill js-type is-active" data-type="__all__">All types</button>
@@ -142,27 +145,36 @@ permalink: /publications/
   <!-- Publications root -->
   <div id="pubs-root">
 
-    {%- comment -%} In preparation block at the very top {%- endcomment -%}
-    {%- if inprep and inprep.size > 0 -%}
+    {%- if inprep.size > 0 -%}
     <h2 class="pub-year" data-year-title="In preparation">In preparation</h2>
     {%- for pub in inprep -%}
     {%- include pub-item.html pub=pub -%}
     {%- endfor -%}
     {%- endif -%}
 
-    {%- comment -%} Year-by-year blocks (excluding in-prep) {%- endcomment -%}
     {%- for y in years -%}
     <h2 class="pub-year" data-year-title="{{ y }}">{{ y }}</h2>
 
-    {%- assign year_pubs = pubs | where: "year", y -%}
-    {%- assign year_pubs = year_pubs | where_exp: "p", "p.status != 'in-prep'" -%}
+    {%- comment -%} collect pubs for this year (excluding in-prep) {%- endcomment -%}
+    {%- assign year_pubs = "" | split: "" -%}
+    {%- for p in pubs -%}
+    {%- if p.status != "in-prep" and p.year == y -%}
+    {%- assign year_pubs = year_pubs | push: p -%}
+    {%- endif -%}
+    {%- endfor -%}
 
-    {%- comment -%}
-    Sort safely by month: first those WITH month (sorted desc),
-    then append those WITHOUT month (original order).
-    {%- endcomment -%}
-    {%- assign with_month = year_pubs | where_exp: "p", "p.month" | sort: "month" | reverse -%}
-    {%- assign without_month = year_pubs | where_exp: "p", "p.month == nil or p.month == ''" -%}
+    {%- comment -%} split by month presence {%- endcomment -%}
+    {%- assign with_month = "" | split: "" -%}
+    {%- assign without_month = "" | split: "" -%}
+    {%- for pub in year_pubs -%}
+    {%- if pub.month and pub.month != "" -%}
+    {%- assign with_month = with_month | push: pub -%}
+    {%- else -%}
+    {%- assign without_month = without_month | push: pub -%}
+    {%- endif -%}
+    {%- endfor -%}
+
+    {%- assign with_month = with_month | sort: "month" | reverse -%}
 
     {%- for pub in with_month -%}
     {%- include pub-item.html pub=pub -%}
@@ -189,9 +201,7 @@ permalink: /publications/
       const topicSet = new Set();
       items.forEach(it => {
         const topics = (it.getAttribute('data-topics') || '')
-          .split(',')
-          .map(s => s.trim())
-          .filter(Boolean);
+          .split(',').map(s => s.trim()).filter(Boolean);
         topics.forEach(t => topicSet.add(t));
       });
 
@@ -242,8 +252,7 @@ permalink: /publications/
         yearTitles.forEach(h2 => {
           const year = h2.getAttribute('data-year-title');
           const visibleInYear = items.some(el =>
-            !el.classList.contains('hidden') &&
-            el.getAttribute('data-year') === year
+            !el.classList.contains('hidden') && el.getAttribute('data-year') === year
           );
           if (year === 'In preparation') {
             const anyInPrepVisible = items.some(el =>
@@ -316,12 +325,7 @@ permalink: /publications/
 
       document.addEventListener('click', (e) => {
         const t = e.target;
-        if (
-          t.matches('.toggle-bibtex') ||
-          t.matches('.toggle-highlights') ||
-          t.matches('.toggle-press') ||
-          t.matches('.toggle-links')
-        ) {
+        if (t.matches('.toggle-bibtex') || t.matches('.toggle-highlights') || t.matches('.toggle-press') || t.matches('.toggle-links')) {
           e.preventDefault();
           const id = t.getAttribute('data-target');
           const el = document.getElementById(id);
@@ -338,4 +342,4 @@ permalink: /publications/
   <p>No publications available yet.</p>
   {%- endif -%}
 
-</div> <!-- end #pubs-page -->
+</div><!-- end #pubs-page -->
