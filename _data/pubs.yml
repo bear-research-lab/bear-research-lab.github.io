@@ -1,6 +1,6 @@
 - year: 2025
   month: 10
-  selected: true
+  selected: True
   topics: ["Assist Robots", "Under-actuated Tendon Routing"]
   title: "Exo-Glove Pinch: Soft Hand-wearable Robot Designed through the Analysis of the Constrained Tendon Routing"
   authors: "Byungchul Kim, Useok Jeong, and Kyu-Jin Cho"
@@ -113,10 +113,10 @@
         publisher={IEEE}
       }
     press:
-    - {title: "MIT CSAIL", url: "https://www.csail.mit.edu/news/using-generative-ai-help-robots-jump-higher-and-land-better"}
-    - {title: "MIT Technology Review (Korea)", url: "https://www.technologyreview.kr/%EC%9D%B4-%EC%A0%90%ED%94%84-%EB%A1%9C%EB%B4%87%EC%9D%80-ai%EA%B0%80-%EC%84%A4%EA%B3%84%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4-mit%EC%9D%98-%EA%B9%80%EB%B3%91%EC%B2%A0/"}
-    - {title: "MIT News", url: "https://news.mit.edu/2025/using-generative-ai-help-robots-jump-higher-land-safely-0627"}
-    - {title: "MIT CSAIL Youtube", url: "https://www.youtube.com/watch?v=dI1J4aPcbmc"}
+      - {title: "MIT CSAIL", url: "https://www.csail.mit.edu/news/using-generative-ai-help-robots-jump-higher-and-land-better"}
+      - {title: "MIT Technology Review (Korea)", url: "https://www.technologyreview.kr/%EC%9D%B4-%EC%A0%90%ED%94%84-%EB%A1%9C%EB%B4%87%EC%9D%80-ai%EA%B0%80-%EC%84%A4%EA%B3%84%ED%96%88%EC%8A%B5%EB%8B%88%EB%8B%A4-mit%EC%9D%98-%EA%B9%80%EB%B3%91%EC%B2%A0/"}
+      - {title: "MIT News", url: "https://news.mit.edu/2025/using-generative-ai-help-robots-jump-higher-land-safely-0627"}
+      - {title: "MIT CSAIL Youtube", url: "https://www.youtube.com/watch?v=dI1J4aPcbmc"}
     video: "https://www.youtube.com/watch?v=g7mGls8oHj4"
 
 
@@ -146,7 +146,7 @@
 
 - year: 2023
   month: 11
-  selected: true
+  selected: True
   kind: conference 
   topics: ["Other Robots", "AI-driven-design"]
   title: "Diffusebot: Breeding soft robots with physics-augmented generative diffusion models"
@@ -168,7 +168,7 @@
 
 - year: 2021
   month: 12
-  selected: true
+  selected: True
   kind: journal
   topics: ["Assist Robots", "Under-actuated Tendon Routing"]
   title: "Slider-Tendon Linear Actuator with Under-actuation and Fast-connection for Soft Wearable Robots "
