@@ -18,7 +18,7 @@
         publisher={IEEE}
       }
     project-website: "https://sites.google.com/view/constrained-tendon-routings"
-    supplementary "https://bear-research-lab.github.io/assets/pub/RAL_CTR_SM.pdf"
+    supplementary: "https://bear-research-lab.github.io/assets/pub/RAL_CTR_SM.pdf"
 
 - year: 2025
   month: 2
@@ -41,7 +41,7 @@
       }
     project-website: "https://sites.google.com/view/dt-routing/overview"
     video: "https://www.youtube.com/watch?v=3sa5VhzjjoU"
-    supplementary "https://bear-research-lab.github.io/assets/pub/RAL_DTR_SM.pdf"
+    supplementary: "https://bear-research-lab.github.io/assets/pub/RAL_DTR_SM.pdf"
 
 - year: 2025
   month: 2
@@ -66,7 +66,7 @@
         publisher={Mary Ann Liebert, Inc., publishers 140 Huguenot Street, 3rd Floor New~…}
       }
     project-website: "https://sites.google.com/view/exo-gloveshell/"
-    supplementary "https://bear-research-lab.github.io/assets/pub/SORO_EGS_SM.pdf"
+    supplementary: "https://bear-research-lab.github.io/assets/pub/SORO_EGS_SM.pdf"
     video: "https://youtu.be/gfiMNtUlHK4"
 
 
@@ -89,7 +89,7 @@
         year={2025},
         publisher={Mary Ann Liebert, Inc., publishers 140 Huguenot Street, 3rd Floor New~…}
       }
-    supplementary "https://bear-research-lab.github.io/assets/pub/SORO_EP3_SM.pdf"
+    supplementary: "https://bear-research-lab.github.io/assets/pub/SORO_EP3_SM.pdf"
     video: "https://www.youtube.com/watch?v=XG7Zscma3a4"
 
 
