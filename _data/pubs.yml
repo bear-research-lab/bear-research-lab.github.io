@@ -123,7 +123,7 @@
   month: 5
   selected: False
   kind: others
-  topics: ["Locomotive Robots","AI-driven-design"]
+  topics: ["Assist Robots","Under-actuated Tendon Routing"]
   title: "Position and Force Constraints in Underactuated Tendon-Driven Systems"
   authors: "Byungchul Kim*, Useok Jeong, Kyu-Jin Cho"
   venue: "ICRA 2025 Workshop on Mechanisms in Robot Manipulation"
@@ -139,15 +139,16 @@
         publisher={IEEE}
       }
     Workshop-website: "https://2025.ieee-icra.org/event/workshop-on-mechanisms-in-robot-manipulation-challenges-and-new-opportunities/"
+    Poster: "https://bear-research-lab.github.io/assets/pub/2025_ICRA_WS_POSTER.pdf"
 
 - year: 2024
-  month: 11
+  month: 10
   selected: false
   kind: conference
   topics: ["Robot Hand/Gripper", "Under-actuated Tendon Routing"]
   title: "Strong Compliant Grasps Using a Cable-Driven Soft Gripper"
   authors: "Gregory Xie, Lillian Chin, Byungchul Kim, Rachel Holladay, and Daniela Rus"
-  venue: "IEEE Robotics and Automation Letters (RA-L)"
+  venue: "2024 IROS"
   img: "/assets/img/pubs/2024_IROS_GRIPPER.png"
   links:
     paper: "https://bear-research-lab.github.io/assets/pub/2024_IROS_GRIPPER.pdf"
@@ -206,7 +207,8 @@
         pages={44398--44423},
         year={2023}
       }
-    video: https://www.youtube.com/watch?v=LSzasdvD3Ss  
+    project-website: "https://diffusebot.github.io/"
+    video: https://www.youtube.com/watch?v=LSzasdvD3Ss 
 
 - year: 2021
   month: 12
@@ -231,3 +233,55 @@
         publisher={IEEE}
       }
     video: https://youtu.be/BQsyxZ3xNZc
+
+- year: 2020
+  month: 5
+  selected: True
+  kind: journal
+  topics: ["Assist Robots", "Under-actuated Tendon Routing"]
+  title: "Joint Angle Estimation of a Tendon-Driven Soft Wearable Robot through a Tension and Stroke Measurement,"
+  authors: "Byungchul Kim, Jiwon Ryu, and Kyu-Jin Cho"
+  venue: "Sensors "
+  img: "/assets/img/pubs/2020_SENSORS_EGI.png"
+  links:
+    paper: "https://bear-research-lab.github.io/assets/pub/SENSORS_EGI.pdf"
+    bibtex: |
+      @article{kim2020joint,
+        title={Joint angle estimation of a tendon-driven soft wearable robot through a tension and stroke measurement},
+        author={Kim, Byungchul and Ryu, Jiwon and Cho, Kyu-Jin},
+        journal={Sensors},
+        volume={20},
+        number={10},
+        pages={2852},
+        year={2020},
+        publisher={MDPI}
+      }
+
+
+- year: 2017
+  month: 2
+  selected: True
+  kind: journal
+  topics: ["Assist Robots", "Under-actuated Tendon Routing"]
+  title: "Development and assessment of a hand assist device: GRIPIT"
+  authors: "Byungchul Kim, Hyunki In, Daeyoung Lee, Kyu-Jin Cho"
+  venue: "Journal of NeuroEngineering and Rehabilitation"
+  img: "/assets/img/pubs/2017_JNER_GRIPIT.png"
+  links:
+    paper: "https://bear-research-lab.github.io/assets/pub/JNER_GRIPIT.pdf"
+    bibtex: |
+      @article{kim2017development,
+        title={Development and assessment of a hand assist device: GRIPIT},
+        author={Kim, Byungchul and In, Hyunki and Lee, Dae-Young and Cho, Kyu-Jin},
+        journal={Journal of neuroengineering and rehabilitation},
+        volume={14},
+        number={1},
+        pages={15},
+        year={2017},
+        publisher={Springer}
+      }
+    video from social fund 1 (Kakao story funding): https://youtu.be/3KyD_rQ8nPc
+    video from social fund 2 (Kakao story funding): https://youtu.be/3KyD_rQ8nPc
+    video from social fund 3 (Kakao story funding): https://youtu.be/3KyD_rQ8nPc
+    video from social fund 4 (Kakao story funding): https://youtu.be/3KyD_rQ8nPc
+
