@@ -7,7 +7,7 @@
   venue: ""
   kind: others
   status: in-prep
-  img: "IP_GENESIS.png"
+  img: "/assets/img/pubs/IP_GENESIS.png"
   links:
     paper: https://genesis-embodied-ai.github.io/
     bibtex: |
