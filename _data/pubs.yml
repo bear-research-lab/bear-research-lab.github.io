@@ -257,7 +257,7 @@
   topics: ["Assist Robots", "Under-actuated Tendon Routing"]
   title: "Building Simple Yet Competent Soft-Rigid Hybrid Hand Wearable Robots"
   authors: "Byungchul Kim and Kyu-Jin Cho"
-  venue: "2022 Bio & Bio Worksho"
+  venue: "2022 Bio & Bio Workshop"
   img: "/assets/img/pubs/2025_SORO_EGS.png"
   links:
     bibtex: |
@@ -299,7 +299,7 @@
   selected: False
   kind: conference
   topics: ["Assist Robots", "Under-actuated Tendon Routing"]
-  title: "Slider-Tendon Linear Actuator with Under-actuation and Fast-connection for Soft Wearable Robots "
+  title: "Slider-Tendon Linear Actuator with Under-actuation and Fast-connection for Soft Wearable Robots (presentation only)"
   authors: "Byungchul Kim, Useok Jeong, Brian Byunghyun Kang, and Kyu-Jin Cho"
   venue: " International Conference on Advanced Intelligent Mechatronics (presentation only)"
   img: "/assets/img/pubs/2021_TMECH_STLA.png"
