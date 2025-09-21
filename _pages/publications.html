@@ -145,13 +145,6 @@ permalink: /publications/
   <!-- Publications root -->
   <div id="pubs-root">
 
-    {%- if inprep.size > 0 -%}
-    <h2 class="pub-year" data-year-title="In preparation">In preparation</h2>
-    {%- for pub in inprep -%}
-    {%- include pub-item.html pub=pub -%}
-    {%- endfor -%}
-    {%- endif -%}
-
     {%- for y in years -%}
     <h2 class="pub-year" data-year-title="{{ y }}">{{ y }}</h2>
 
@@ -183,6 +176,14 @@ permalink: /publications/
     {%- include pub-item.html pub=pub -%}
     {%- endfor -%}
     {%- endfor -%}
+
+    {%- if inprep.size > 0 -%}
+    <h2 class="pub-year" data-year-title="In preparation">In preparation</h2>
+    {%- for pub in inprep -%}
+    {%- include pub-item.html pub=pub -%}
+    {%- endfor -%}
+    {%- endif -%}
+
   </div>
 
   <script>
