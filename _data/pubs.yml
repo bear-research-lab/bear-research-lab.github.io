@@ -231,6 +231,30 @@
     project-website: "https://diffusebot.github.io/"
     video: https://www.youtube.com/watch?v=LSzasdvD3Ss 
 
+- year: 2023
+  month: 5
+  selected: False
+  kind: others 
+  topics: ["Robot Hand/Gripper", "Sensors"]
+  title: "Laser-Etching Flexible Sensors for Robotic Touch Recognition"
+  authors: "Cedric Honnet, Yunyi Zhu, Martin Nisser, Chao Liu, Byungchul Kim, Jae Hun Seol, Jongho Lee, Daniela Rus, and Stefanie Mueller"
+  venue: "2023 ICRA (late braking results)"
+  img: "/assets/img/pubs/2023_ICRA_SSH.png"
+  links:
+    video: https://www.youtube.com/watch?v=o4CEsLRgKqg
+
+- year: 2022
+  month: 8
+  selected: False
+  kind: others 
+  topics: ["Assist Robots", "Under-actuated Tendon Routing"]
+  title: "Building Simple Yet Competent Soft-Rigid Hybrid Hand Wearable Robots"
+  authors: "Byungchul Kim and Kyu-Jin Cho"
+  venue: "2022 Bio & Bio Worksho"
+  img: "/assets/img/pubs/2025_SORO_EGS.png"
+  links:
+    Workshop-website: https://sites.google.com/view/biorob-2022-hand-wearable/
+
 - year: 2021
   month: 12
   selected: True
