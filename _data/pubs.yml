@@ -241,6 +241,13 @@
   venue: "2023 ICRA (late braking results)"
   img: "/assets/img/pubs/2023_ICRA_SSH.png"
   links:
+    bibtex: |
+        @inproceedings{cedric2023laseretching,
+          title={Laser-etching flexible sensors for robotic touch recognition},
+          author={Honnet, Cedric and Zhu, Yunyi and Nisser, Martin and Liu, Chao and Kim, Byungchul and Seol, Jae Hun and Lee, Jongho and Rus, Daniela and Mueller, Stefanie},
+          journal={2023 IEEE International Conference on Robotics and Automation (ICRA) Late Breaking Results},
+          year={2023}
+        }
     video: https://www.youtube.com/watch?v=o4CEsLRgKqg
 
 - year: 2022
@@ -253,6 +260,14 @@
   venue: "2022 Bio & Bio Worksho"
   img: "/assets/img/pubs/2025_SORO_EGS.png"
   links:
+    bibtex: |
+      @inproceedings{kim2022building,
+        title={Building simple yet competent soft-rigid hybrid hand wearable robots},
+        author={Kim, Byungchul and Cho, Kyu-Jin},
+        booktitle={2022 Bio \& Bio Workshop on Wearable Robotics for Augmentation and Assistance},
+        year={2022},
+        organization={IEEE}
+      }
     Workshop-website: https://sites.google.com/view/biorob-2022-hand-wearable/
 
 - year: 2021
