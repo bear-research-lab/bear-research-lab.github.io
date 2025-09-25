@@ -35,4 +35,6 @@ For more details, see our [Projects](/projects/) page.
    - **Co-design body and brain** simultaneously, optimizing robots for task-specific performance.
 
 ---
-If you are interested in joining our lab, please check out the [Join Us](/join-us/) page for more information.
+<div align="center"><strong>
+If you are interested in joining our lab, please check out the <a href="/join-us/">Join Us</a> page for more information.
+</strong></div>
