@@ -37,5 +37,5 @@ For more details, see our [Projects](/projects/) page.
 ---
 <div align="center"><strong>
 If you are interested in joining our lab,<br>
-please check out the <a href="/join-us/">Join Us</a> page for more information.
+please check out the <a href="/opportunities/">Opportunities</a> page for more information.
 </strong></div>
