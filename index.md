@@ -13,6 +13,11 @@ permalink: /
 # Welcome to the BEAR Lab 🐻
 At the **Bioinspired Embodied AI and Robotics (BEAR) Lab**, we envision a world where robots and AI serve as agents that support and empower people.
 
+---
+## News 
+- **[03/2026]** The Bioinspired Embodied AI and Robotics (BEAR) Lab at SKKU is established!
+
+---
 
 ## Research Areas
 For more details, see our [Projects](/projects/) page.
@@ -28,3 +33,6 @@ For more details, see our [Projects](/projects/) page.
    - **Design robots** (shaping morphology and mechanisms)  
    - **Control robots** (adapting to uncertain, real-world environments)  
    - **Co-design body and brain** simultaneously, optimizing robots for task-specific performance.
+
+---
+If you are interested in joining our lab, please check out the [Join Us](/join-us/) page for more information.
