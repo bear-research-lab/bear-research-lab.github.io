@@ -3,8 +3,6 @@ layout: page
 permalink: /projects/codesign/
 ---
 
-# Computational Robot Co-Design
-
 ## 1. Why we are interested in computational robot co-design? 
 Designing robots could be understood as a process of **optimizing robot design for the given task**. Then the question becomes: How does human optimize the robot design for a given task? Well, I believe that, the human often rely on **experience** and **intuition** to design robots. However, this process is often **time-consuming**, **expensive**, and **sub-optimal**.
 
