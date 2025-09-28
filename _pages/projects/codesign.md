@@ -30,22 +30,14 @@ Form this hint, our lab will focus on the **computational robot co-design** appr
 ### 2. What have we done so far?
 
 #### 2.1. Robot co-design through diffusion based generative model
-[Paper link](https://bear-research-lab.github.io/assets/pub/Neurips_DBOT.pdf)
-The advance in generative models, espe
+**Project Lead:** Tsun-Hsuan Wang
+**Collaborators:** Juntian Zheng, Pingchuan Ma, Yilun Du, Byungchul Kim,Andrew Spielberg, Joshua B. Tenenbaum, Chuang Gan, Daniela Rus
+**Conference:** Neurips 2023
+**Links**: [Paper link](https://bear-research-lab.github.io/assets/pub/Neurips_DBOT.pdf), [Video link](https://www.youtube.com/watch?v=LSzasdvD3Ss)
 
-
-#### 2.2. Jumping Robot Design through Evolution-Inspired Approach  
-**Project Lead:** Byungchul Kim  
-**Collaborators:** Tsun-Hsuan Wang, Daniela Rus  
-**Conference:** ICRA 2025
-**Links**: [Paper](https://bear-research-lab.github.io/assets/pub/2025_ICRA_GENJUMP.pdf), [Video link](https://www.youtube.com/watch?v=g7mGls8oHj4)
-
----
 
 ##### Motivation  
 Traditional gradient-based optimization, such as differentiable simulation, may struggle with the **high dimensionality and non-linearity of robot shape design**. We sought a method that could explore this vast space more broadly and discover **unconventional but effective morphologies**.  
-
----
 
 ##### Method  
 We designed an **evolution-inspired design loop**:  
@@ -56,19 +48,47 @@ We designed an **evolution-inspired design loop**:
 
 This cycle is repeated across **five generations**.  
 
+##### Results  
+- **+41% improvement** in jumping height.  
+- **+210% improvement** in landing success rate.  
+- Generation of **novel, non-intuitive morphologies** that outperform initial designs.  
+
+##### Contribution  
+This work inspired from our previous work (explained in section 2.1) but with distinct differences: 
+- The use of human prior design to guide the initial generation. This enables the final designs to be 100% manufacturable using 3D printing and off-the-shelf components. This also reduces design search space significantly, enabling more efficient exploration of the design space.
+- The focus on a specific task (jumping and landing) with clear performance metrics. This allows for more targeted optimization and evaluation of designs.
+
 ---
+
+#### 2.2. Jumping Robot Design through Evolution-Inspired Approach  
+**Project Lead:** Byungchul Kim  
+**Collaborators:** Tsun-Hsuan Wang, Daniela Rus  
+**Conference:** ICRA 2025
+**Links**: [Paper](https://bear-research-lab.github.io/assets/pub/2025_ICRA_GENJUMP.pdf), [Video link](https://www.youtube.com/watch?v=g7mGls8oHj4)
+
+##### Motivation  
+Traditional gradient-based optimization, such as differentiable simulation, may struggle with the **high dimensionality and non-linearity of robot shape design**. We sought a method that could explore this vast space more broadly and discover **unconventional but effective morphologies**.  
+
+##### Method  
+We designed an **evolution-inspired design loop**:  
+1. **Generation** – The first population of ~500 candidate robots is generated with random shapes from diffusion-based generative model.
+2. **Evaluation** – Each design is tested in a physics simulator on the jumping and landing tasks.  
+3. **Selection** – Only the **top 12 performers** are chosen based on metrics such as jump height and landing stability.  
+4. **Reproduction** – These survivors guide the creation of the next generation of candidates.  
+
+This cycle is repeated across **five generations**.  
 
 ##### Results  
 - **+41% improvement** in jumping height.  
 - **+210% improvement** in landing success rate.  
 - Generation of **novel, non-intuitive morphologies** that outperform initial designs.  
 
----
-
 ##### Contribution  
 This work inspired from our previous work (explained in section 2.1) but with distinct differences: 
 - The use of human prior design to guide the initial generation. This enables the final designs to be 100% manufacturable using 3D printing and off-the-shelf components. This also reduces design search space significantly, enabling more efficient exploration of the design space.
 - The focus on a specific task (jumping and landing) with clear performance metrics. This allows for more targeted optimization and evaluation of designs.
+
+---
 
 #### 2.3. What's next? 
 Although we have made interesting results in computational robot co-design, our current works have only focused on robot shape design using diffusion-based generative models. However, we can explore more complex robot design space including robot morphology (shape, structure, material), robot control (controller, policy), and robot fabrication (manufacturing process, cost). Let's explore more complex robot design space using more advanced AI, optimization, and simulation techniques.
