@@ -29,8 +29,55 @@ Form this hint, our lab will focus on the **computational robot co-design** appr
 
 ### 2. What have we done so far?
 
+#### 2.1. Jumping Robot Design through Evolution-Inspired Approach  
+**Project Lead:** Byungchul Kim  
+
+- **[Paper link](https://bear-research-lab.github.io/assets/pub/2025_ICRA_GENJUMP.pdf)**  
+- **[Video link](https://www.youtube.com/watch?v=g7mGls8oHj4)** 
+
+---
+
+##### Motivation  
+Traditional gradient-based optimization, such as differentiable simulation, may struggle with the **high dimensionality and non-linearity of robot shape design**. We sought a method that could explore this vast space more broadly and discover **unconventional but effective morphologies**.  
+
+---
+
+##### Method  
+We designed an **evolution-inspired design loop**:  
+1. **Generation** – The first population of ~500 candidate robots is generated with random shapes from diffusion-based generative model.
+2. **Evaluation** – Each design is tested in a physics simulator on the jumping and landing tasks.  
+3. **Selection** – Only the **top 12 performers** are chosen based on metrics such as jump height and landing stability.  
+4. **Reproduction** – These survivors guide the creation of the next generation of candidates.  
+
+This cycle is repeated across **five generations**.  
+
+---
+
+##### Results  
+- **+41% improvement** in jumping height.  
+- **+210% improvement** in landing success rate.  
+- Emergence of **novel, non-intuitive morphologies** that outperform initial designs.  
+
+---
+
+##### Contribution  
+Our work demonstrates a **new paradigm for robot design**:  
+- **Not purely evolutionary algorithms** → no explicit crossover/mutation.  
+- **Not purely gradient-based optimization** → no direct differentiation through simulation.  
+- Instead, a **generative selection–optimization framework** that:  
+  - Broadly explores morphology space.  
+  - Selectively refines promising candidates.  
+  - Balances **AI-driven generation** with **simulation feedback**.  
+
+This framework highlights how **evolution-inspired principles** and **generative AI** can combine to automate the search for high-performance robot designs.  
+
+
 #### 2.1. Jumping robot design through evolutionary approach
+Project lead: Byungchul Kim
+
 [Paper link](https://bear-research-lab.github.io/assets/pub/2025_ICRA_GENJUMP.pdf)
+[Video link]
+
 Our approach can be described as an evolution-inspired design loop, similar to natural selection. The first generation of robots is created with random shape (with zero guidance). Each robot is then evaluated in a physics simulator to assess its performance on the jumping/landing tasks. 
 
 Based on their performance, only the top-peroforming robots (12 out of 500) are selected to "reproduce" and generate the next generation of robots. This reproduction process is done for five generations, showing 41% improvement in jumping height and 210% improvement in landing success rate. 
