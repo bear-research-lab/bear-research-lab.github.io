@@ -36,7 +36,7 @@ Form this hint, our lab will focus on the **computational robot co-design** appr
 
 **Conference:** Neurips 2023
 
-**Links**: [Paper link](https://bear-research-lab.github.io/assets/pub/Neurips_DBOT.pdf), [Video link](https://www.youtube.com/watch?v=LSzasdvD3Ss)
+**Links**: [Paper](https://bear-research-lab.github.io/assets/pub/Neurips_DBOT.pdf), [Video](https://www.youtube.com/watch?v=LSzasdvD3Ss)
 
 
 ##### Motivation  
