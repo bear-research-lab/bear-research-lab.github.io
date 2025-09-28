@@ -67,17 +67,8 @@ This cycle is repeated across **five generations**.
 
 ##### Contribution  
 This work inspired from our previous work (explained in section 2.1) but with distinct differences: 
-- The use of human prior design to guide the initial generation. This 
-
- a **new paradigm for robot design**:  
-- **Not purely evolutionary algorithms** → no explicit crossover/mutation.  
-- **Not purely gradient-based optimization** → no direct differentiation through simulation.  
-- Instead, a **generative selection–optimization framework** that:  
-  - Broadly explores morphology space.  
-  - Selectively refines promising candidates.  
-  - Balances **AI-driven generation** with **simulation feedback**.  
-- Easier to find lo
-
+- The use of human prior design to guide the initial generation. This enables the final designs to be 100% manufacturable using 3D printing and off-the-shelf components. This also reduces design search space significantly, enabling more efficient exploration of the design space.
+- The focus on a specific task (jumping and landing) with clear performance metrics. This allows for more targeted optimization and evaluation of designs.
 
 #### 2.3. What's next? 
 Although we have made interesting results in computational robot co-design, our current works have only focused on robot shape design using diffusion-based generative models. However, we can explore more complex robot design space including robot morphology (shape, structure, material), robot control (controller, policy), and robot fabrication (manufacturing process, cost). Let's explore more complex robot design space using more advanced AI, optimization, and simulation techniques.
