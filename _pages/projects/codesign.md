@@ -30,11 +30,16 @@ Form this hint, our lab will focus on the **computational robot co-design** appr
 ### 2. What have we done so far?
 
 #### 2.1. Jumping robot design through evolutionary approach
-Inspired from nature, we have developed a computational framework that can 
+[Paper link](https://bear-research-lab.github.io/assets/pub/2025_ICRA_GENJUMP.pdf)
+Our approach can be described as an evolution-inspired design loop, similar to natural selection. The first generation of robots is created with random shape (with zero guidance). Each robot is then evaluated in a physics simulator to assess its performance on the jumping/landing tasks. 
 
-Acellerating "evolution" 
+Based on their performance, only the top-peroforming robots (12 out of 500) are selected to "reproduce" and generate the next generation of robots. This reproduction process is done for five generations, showing 41% improvement in jumping height and 210% improvement in landing success rate. 
+
+Our work demonstrates a new paradigm for robot design. Instead of relying on gradient signals propagated through differentiable simulators, which become difficult to scale for complex, high-dimensional shapes, we adopt a generative selection–optimization framework. In each generation, a large pool of candidate morphologies is produced, evaluated in physics simulation, and down-selected to the most promising designs. These survivors then guide the creation of subsequent generations. This process, inspired by evolutionary search, enables us to explore the design space broadly and discover unconventional robot morphologies that are unlikely to emerge from purely gradient-based optimization. By combining generative AI with selective refinement, our approach circumvents the limitations of direct shape differentiation while still leveraging simulation feedback to drive performance-oriented design.
+
 
 #### 2.2. Robot co-design through diffusion based generative model
+[Paper link](https://bear-research-lab.github.io/assets/pub/Neurips_DBOT.pdf)
 The advance in generative models, espe
 
 #### 2.3. What's next? 
