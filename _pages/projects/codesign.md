@@ -3,10 +3,10 @@ layout: page
 permalink: /projects/codesign/
 ---
 
-## 1. Why we are interested in computational robot co-design? 
-Designing robots could be understood as a process of **optimizing robot design for the given task**. Then the question becomes: How does human optimize the robot design for a given task? Well, I believe that, the human often rely on **experience** and **intuition** to design robots. However, this process is often **time-consuming**, **expensive**, and **sub-optimal**.
+### 1. Why we are interested in computational robot co-design? 
+Designing robots could be understood as a process of **optimizing robot design for the given task**. Following question could be: How does human optimize the robot design for a given task? One possible answer could be, the human often rely on **experience** and **intuition** to design robots. However, this process is often **time-consuming**, **expensive**, and **sub-optimal**.
 
-There has been several successful robot design frameworks. 
+Several successful robot design frameworks include:
 
 1. Bio-inspired design: This approach draws inspiration from nature to design robots that mimic the behavior and structure of biological organisms. Examples include robotic fish, birds, and insects. In this approach, we often rely on how the creatures in nature have evolved to adapt to their environment.
 
@@ -14,27 +14,30 @@ There has been several successful robot design frameworks.
 
 3. Modular robotics: This approach involves designing robots using modular components that can be easily reconfigured and combined to create different robot designs. This approach reduces the dimensionality of the design space and allows for more efficent exploration of this design space. 
 
-Although these approaches have shown great success in designing robots, we cannot ignore the fact that they often rely on human expertise, intuition, and trial-and-error. Another big challenge is that 
+Although these approaches have shown great success in designing robots, following question could be "how can we control the robot?" or "how can we guarantee the obtained robot design will work appropriately considering the robot control?" or "can we find the best robot design without considering how it will be controlled?"
 
-So, let's think about how the robot design trend can be in the future. Can we minimize the human involvement in the robot design process? Although it is hard to answer this question, we can at least think about how AI and computational approaches can "generate" and "optimize" data in other fields. For example, in the field of computer vision, we have seen 
+These questions lead us to the concept of **robot co-design**, which involves the simultaneous optimization of both the robot's physical embodiment (body) and its control strategy (brain). We can also consider the robot co-design as a *bioinspired robot design* approach, since in nature, the body and brain of animals have co-evolved to adapt to their environment and perform specific tasks effectively.
 
-From this perspective, we will fully leverage the power of computational approaches including AI, optimization, and simulation to **automate** and **scale** the robot design process.
+So, how can we achieve the robot co-design? Should we wait for thousands of years of evolution? Or should we rely on huge amount of human effort to design and optimize the robot body and controller iteratively?
 
-1. We can now have better **generative models** that can generate diverse and high-quality robot designs.
-2. We can now have faster and more accurate **physics simulation** that can evaluate the performance of robot designs in a virtual environment.
-3. We can now have more effective **optimization algorithms** that can search for the best robot design among a large design space.
+To answer these questions, let's think about the current trend of AI and robot technology. We have seen significant advances in AI, especially in the field of generative models and reinforcement learning. From the robot technology perspective, we have seen significant advances in physics simulation and optimization algorithms. 
 
-From this point of view, we will focus on the following research questions:
-- How to **represent** the robot design in a way that is suitable for optimization and simulation?
-- How to **generate** diverse and high-quality robot designs?
+Form this hint, our lab will focus on the **computational robot co-design** approach, which leverages the power of AI, optimization, and simulation to automate and scale the robot design process.
 
 ---
 
-## 2. What have we done so far?
+### 2. What have we done so far?
 
 #### 2.1. Jumping robot design through evolutionary approach
 Inspired from nature, we have developed a computational framework that can 
 
 Acellerating "evolution" 
 
-#### 2.2. 
+#### 2.2. Robot co-design through diffusion based generative model
+The advance in generative models, espe
+
+#### 2.3. What's next? 
+Although we have made interesting results in computational robot co-design, our current works have only focused on robot shape design using diffusion-based generative models. However, we can explore more complex robot design space including robot morphology (shape, structure, material), robot control (controller, policy), and robot fabrication (manufacturing process, cost). Let's explore more complex robot design space using more advanced AI, optimization, and simulation techniques.
+
+---
+This page was written with the help of large language model (LLM).
