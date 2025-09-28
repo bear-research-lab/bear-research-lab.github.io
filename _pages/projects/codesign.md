@@ -31,8 +31,11 @@ Form this hint, our lab will focus on the **computational robot co-design** appr
 
 #### 2.1. Robot co-design through diffusion based generative model
 **Project Lead:** Tsun-Hsuan Wang
+
 **Collaborators:** Juntian Zheng, Pingchuan Ma, Yilun Du, Byungchul Kim,Andrew Spielberg, Joshua B. Tenenbaum, Chuang Gan, Daniela Rus
+
 **Conference:** Neurips 2023
+
 **Links**: [Paper link](https://bear-research-lab.github.io/assets/pub/Neurips_DBOT.pdf), [Video link](https://www.youtube.com/watch?v=LSzasdvD3Ss)
 
 
@@ -62,8 +65,11 @@ This work inspired from our previous work (explained in section 2.1) but with di
 
 #### 2.2. Jumping Robot Design through Evolution-Inspired Approach  
 **Project Lead:** Byungchul Kim  
+
 **Collaborators:** Tsun-Hsuan Wang, Daniela Rus  
+
 **Conference:** ICRA 2025
+
 **Links**: [Paper](https://bear-research-lab.github.io/assets/pub/2025_ICRA_GENJUMP.pdf), [Video link](https://www.youtube.com/watch?v=g7mGls8oHj4)
 
 ##### Motivation  
