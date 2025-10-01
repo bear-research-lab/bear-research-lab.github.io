@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Projects
 permalink: /projects/
 ---
 
@@ -31,11 +30,11 @@ One direction is enabling technology side. This includes how can we build and co
 ### Category 2. Application 
 Another direction is application side. This includes how can we apply robotics to real-world problems, especially in human-centered domains. This means that, we are focusing on **specific robots** rather than **methods**. From this perspective, we will build robots that can assists human beings in our daily life, such as kitchen assistance robot, wearable robots and prosthetics.
 
-### 2.1. Assistive Robots including Wearable Robots & Prosthetics
+### 2.1. Assistive Robots
 <div class="project-card">
   <img src="/assets/img/projects/2025_SORO_EGS.png" alt="Wearable robot" class="project-img"/>
   <div class="project-text">
-    <h3>Wearable Robots & Prosthetics for Rehabilitation and Assistive Applications</h3>
+    <h3>Wearable Robots & Prosthetics</h3>
     <p>
       We design and study **tendon-driven wearable robots and prosthetic devices** 
       to support individuals with motor impairments. Our research spans from 
