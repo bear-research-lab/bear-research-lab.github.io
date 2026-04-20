@@ -5,9 +5,9 @@
       role: Assistant Professor
       img: /assets/img/members/bckim.jpg
       affiliation: "Dept. of Biomedical Engineering, Sungkyunkwan University"
-      office: "test"
-      phone: "test"
-      email: "bckim at mit.edu"
+      office: "Complex Research Building 2, Room 83458"
+      phone: "031)299-4337"
+      email: "bc.kim at skku.edu"
       website: https://bc-kim.github.io
       # linkedin: https://www.linkedin.com/in/byungchul-kim/
       # scholar: https://scholar.google.com/citations?user=KPQ53S0AAAAJ&hl=en
@@ -40,4 +40,8 @@
       website: https://example.com/
 
 - group: Undergraduate Researchers
-  people: []
+  people: 
+    - name: Gunwoo Kim
+      slug: bear-1
+      img: /assets/img/members/bear.png
+      website: https://example.com/
