@@ -241,6 +241,7 @@
   venue: "2023 ICRA (late braking results)"
   img: "/assets/img/pubs/2023_ICRA_SSH.png"
   links:
+    paper: "https://bear-research-lab.github.io/assets/pub/2024_ICRA_SENSOR.pdf"
     bibtex: |
         @inproceedings{cedric2023laseretching,
           title={Laser-etching flexible sensors for robotic touch recognition},

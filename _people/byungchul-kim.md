@@ -7,8 +7,6 @@ role: Assistant Professor (SKKU)
 affiliation: Department of Biomedical Engineering, Sungkyunkwan University
 website: https://bc-kim.github.io
 linkedin: https://www.linkedin.com/in/byungchul-kim/
-office: "TBD"
-phone: "TBD"
 email: "bckim@mit.edu"
 scholar: https://scholar.google.com/citations?user=KPQ53S0AAAAJ&hl=en
 ---
