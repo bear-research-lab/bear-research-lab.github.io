@@ -42,7 +42,7 @@
 - group: Undergraduate Researchers
   people: 
     - name: Gunwoo Kim
-      # slug: bear-1
+      slug: gwkim_member
       img: /assets/img/members/gwkim.jpg
       # website: https://example.com/
 
