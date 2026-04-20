@@ -11,7 +11,7 @@ permalink: /members/
 
 {% case group_name %}
 
-{% when "graduate students" %}
+{% when "graduate students" or "undergraduate researchers" %}
 <!-- Graduate Students: compact 4-column grid -->
 <div class="member-grid member-grid--grads">
   {% for person in block.people %}
