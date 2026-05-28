@@ -19,6 +19,28 @@
       }
     project-website: "https://genesis-embodied-ai.github.io/"
 
+- year: 2026
+  month: 5
+  selected: True
+  topics: ["Embodied AI", "Vision Language Models"]
+  title: "EMBGUARD: Constructing Hazard-Aware Guardrails for Safe Planning in Embodied Agents"
+  authors: "Dongwook Choi, Taeyoon Kwon, Bogyung Jeong, Minju Kim, Yeonjun Hwang, Hyojun Kim, Byungchul Kim, Young Kyun Jang, Jinyoung Yeo"
+  venue: "2026 International Conference on Machine Learning (ICML)"
+  kind: conference 
+  img: "/assets/img/pubs/2026_ICML_EMBGUARD.png"
+  links:
+    paper: "https://bear-research-lab.github.io/assets/pub/2026_ICML_EMBGuard.pdf"
+    bibtex: |
+      @inproceedings{
+        anonymous2026embguard,
+        title={{EMBGUARD}: Constructing Hazard-Aware Guardrails for Safe Planning in Embodied Agents},
+        author={Anonymous},
+        booktitle={Forty-third International Conference on Machine Learning},
+        year={2026},
+        url={https://openreview.net/forum?id=aoUVQ5d8vf}
+        }
+    project-website: "https://openreview.net/forum?id=aoUVQ5d8vf"
+
 - year: 2025
   month: 10
   selected: True
