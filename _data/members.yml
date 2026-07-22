@@ -46,9 +46,9 @@
       img: /assets/img/members/gwkim.jpg
       # website: https://example.com/
 
-    - name: Bear2
-      slug: bear-2
-      img: /assets/img/members/bear.png
+    - name: Hyungjun (Noah) Nam 
+      slug: hnam_member
+      img: /assets/img/members/hnam.jpg
       website: https://example.com/
     
     - name: Bear3
