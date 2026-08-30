@@ -35,4 +35,4 @@ Dr. Kim earned his B.S., M.S., and Ph.D. degrees in Mechanical and Aerospace Eng
 
 [Lab_Daniela_Link]: https://www.csail.mit.edu/person/daniela-rus  
 [Lab_link]: https://biorobotics.snu.ac.kr/lab-members  
-[cv_link]: https://bc-kim.github.io/assets/CV/ByungchulKim-CV.pdf
+[cv_link]: https://bear-research-lab.github.io/assets/CV/CV_BCKIM.pdf
