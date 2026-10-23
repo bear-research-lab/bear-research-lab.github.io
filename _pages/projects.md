@@ -3,12 +3,12 @@ layout: page
 permalink: /projects/
 ---
 
-We are making advances in robotics through two directional approaches: (1) [enabling technology](#category-1-enabling-technology) and (2) [application](#category-2-application).
+Our long-term goal is a **general-purpose robot** that can work alongside people in any environment. We are not there yet, and we believe the way to get there is to build robots that truly work in specific, real-world settings first. So we advance robotics in two directions: (1) [enabling technology](#category-1-enabling-technology), the methods that will eventually lead to general robots, and (2) [application](#category-2-application), specific use cases where robots can make a difference today. Our current applications are **surgical operation**, **lab automation**, and **hotel operation**.
 
 ---
 
 ### Category 1. Enabling Technology
-One direction is enabling technology side. This includes how can we build and control robots more systematically and efficiently. This means that, we are focusing on **methods** rather than **specific robots**. From this perspective, we will build a framework that builds with minimized human effort, using computational approaches including AI, optimization, and simulation.
+One direction is enabling technology side. This includes how we can build and control robots more systematically and efficiently. This means that we focus on **methods** rather than **specific robots**. From this perspective, we build frameworks that design robots with minimal human effort, using computational approaches including AI, optimization, and simulation.
 
 ### 1.1. Computational Robot Co-Design
 <div class="project-card">
@@ -16,7 +16,7 @@ One direction is enabling technology side. This includes how can we build and co
   <div class="project-text">
     <h3>Computational Robot Co-Design</h3>
     <p>
-      We develop **AI-driven frameworks** for robot body & controller co-design, 
+      We develop <strong>AI-driven frameworks</strong> for robot body & controller co-design, 
       integrating generative models, physics simulation, and optimization. 
       This approach enables scalable, task-specific robots such as 
       agile legged systems or modular manipulators.  
@@ -25,10 +25,24 @@ One direction is enabling technology side. This includes how can we build and co
   </div>
 </div>
 
+### 1.2. Brain-Inspired Physical AI
+<div class="project-card">
+  <img src="/assets/img/projects/brain_inspired.svg" alt="Brain-inspired Physical AI" class="project-img"/>
+  <div class="project-text">
+    <h3>Brain-Inspired Physical AI</h3>
+    <p>
+      We take inspiration from how the <strong>human brain</strong> perceives, plans, 
+      and controls the body to build Physical AI that learns efficiently, 
+      adapts quickly, and acts reliably in the physical world.  
+    </p>
+    <a href="/projects/brain-inspired/" class="btn">Learn More</a>
+  </div>
+</div>
+
 ---
 
 ### Category 2. Application 
-Another direction is application side. This includes how can we apply robotics to real-world problems, especially in human-centered domains. This means that, we are focusing on **specific robots** rather than **methods**. From this perspective, we will build robots that can assists human beings in our daily life, such as kitchen assistance robot, wearable robots and prosthetics.
+Another direction is application side. This includes how we can apply robotics to real-world problems, especially in human-centered domains. This means that we focus on **specific robots** rather than **methods**. From this perspective, we build robots that assist people in daily life and at work, such as wearable robots and Physical AI for surgery, lab automation, and hotels.
 
 ### 2.1. Assistive Robots
 <div class="project-card">
@@ -36,7 +50,7 @@ Another direction is application side. This includes how can we apply robotics t
   <div class="project-text">
     <h3>Wearable Robots & Prosthetics</h3>
     <p>
-      We design and study **tendon-driven wearable robots and prosthetic devices** 
+      We design and study <strong>tendon-driven wearable robots and prosthetic devices</strong> 
       to support individuals with motor impairments. Our research spans from 
       lightweight hand exoskeletons to prosthetic hands, focusing on intuitive 
       control, comfort, and daily usability.  
@@ -52,8 +66,9 @@ Another direction is application side. This includes how can we apply robotics t
     <h3>Physical AI for Real-World Operation</h3>
     <p>
       We build <strong>Vision-Language-Action (VLA) based Physical AI</strong> 
-      that acts safely in real-world workplaces, such as 
-      <strong>surgical assistance</strong> and <strong>hotel room housekeeping</strong>.  
+      for <strong>specific real-world use cases</strong> rather than general tasks: 
+      <strong>surgical assistance</strong>, <strong>lab automation</strong>, 
+      and <strong>hotel room housekeeping</strong>.  
     </p>
     <a href="/projects/physical-ai/" class="btn">Learn More</a>
   </div>

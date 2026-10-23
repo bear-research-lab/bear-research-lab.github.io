@@ -237,7 +237,7 @@
   topics: ["Other Robots", "AI-driven-design"]
   title: "Diffusebot: Breeding soft robots with physics-augmented generative diffusion models"
   authors: "Tsun-Hsuan Wang, Juntian Zheng, Pingchuan Ma, Yilun Du, Byungchul Kim, Andrew Everett Spielberg, Joshua B. Tenenbaum, Chuang Gan, and Daniela Rus"
-  venue: "Neural Information Processing Systems (NeurIPS) 2024, Oral presentation"
+  venue: "Neural Information Processing Systems (NeurIPS) 2023, Oral presentation"
   img: "/assets/img/pubs/2023_Neurips_DBOT.gif"
   links:
     paper: "https://bear-research-lab.github.io/assets/pub/Neurips_DBOT.pdf"

@@ -14,5 +14,5 @@
   <text x="370" y="156" text-anchor="middle" font-size="15" fill="#ffffff">Action</text>
   <line x1="120" y1="150" x2="168" y2="150" stroke="#5b6b7b" stroke-width="1.5" marker-end="url(#arr)"/>
   <line x1="270" y1="150" x2="318" y2="150" stroke="#5b6b7b" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="220" y="240" text-anchor="middle" font-size="13" fill="#5b6b7b">surgical assistance · hotel housekeeping</text>
+  <text x="220" y="240" text-anchor="middle" font-size="13" fill="#5b6b7b">surgery · lab automation · hotel</text>
 </svg>
