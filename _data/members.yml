@@ -52,10 +52,10 @@
       img: /assets/img/members/hnam.jpg
       # website: https://example.com/
     
-    - name: Bear3
-      slug: bear-3
+    - name: Seeyah Sun
+      slug: ssun_member
       img: /assets/img/members/bear.png
-      website: https://example.com/
+      # website: https://example.com/
 
     - name: Bear4
       slug: bear-4
