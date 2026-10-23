@@ -44,3 +44,17 @@ Another direction is application side. This includes how can we apply robotics t
     <a href="/projects/wearable/" class="btn">Learn More</a>
   </div>
 </div>
+
+### 2.2. Physical AI (VLA)
+<div class="project-card">
+  <img src="/assets/img/projects/physical_ai_vla.svg" alt="Physical AI (VLA)" class="project-img"/>
+  <div class="project-text">
+    <h3>Physical AI for Real-World Operation</h3>
+    <p>
+      We build <strong>Vision-Language-Action (VLA) based Physical AI</strong> 
+      that acts safely in real-world workplaces, such as 
+      <strong>surgical assistance</strong> and <strong>hotel room housekeeping</strong>.  
+    </p>
+    <a href="/projects/physical-ai/" class="btn">Learn More</a>
+  </div>
+</div>

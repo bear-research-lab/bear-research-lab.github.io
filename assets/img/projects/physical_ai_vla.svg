@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 300" font-family="Helvetica, Arial, sans-serif">
+  <rect width="440" height="300" rx="16" fill="#f4f8fc"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b6b7b"/>
+    </marker>
+  </defs>
+  <text x="220" y="40" text-anchor="middle" font-size="16" font-weight="bold" fill="#243b53">Physical AI (VLA)</text>
+  <rect x="20" y="120" width="100" height="60" rx="10" fill="#ffffff" stroke="#9fb3c8"/>
+  <text x="70" y="156" text-anchor="middle" font-size="15" fill="#243b53">Vision</text>
+  <rect x="170" y="120" width="100" height="60" rx="10" fill="#ffffff" stroke="#9fb3c8"/>
+  <text x="220" y="156" text-anchor="middle" font-size="15" fill="#243b53">Language</text>
+  <rect x="320" y="120" width="100" height="60" rx="10" fill="#007ACC"/>
+  <text x="370" y="156" text-anchor="middle" font-size="15" fill="#ffffff">Action</text>
+  <line x1="120" y1="150" x2="168" y2="150" stroke="#5b6b7b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="270" y1="150" x2="318" y2="150" stroke="#5b6b7b" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="220" y="240" text-anchor="middle" font-size="13" fill="#5b6b7b">surgical assistance · hotel housekeeping</text>
+</svg>
