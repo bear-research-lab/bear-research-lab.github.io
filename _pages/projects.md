@@ -42,20 +42,19 @@ One direction is enabling technology side. This includes how we can build and co
 ---
 
 ### Category 2. Application 
-Another direction is application side. This includes how we can apply robotics to real-world problems, especially in human-centered domains. This means that we focus on **specific robots** rather than **methods**. From this perspective, we build robots that assist people in daily life and at work, such as wearable robots and Physical AI for surgery, lab automation, and hotels.
+Another direction is application side. This includes how we can apply robotics to real-world problems, especially in human-centered domains. This means that we focus on **specific robots** rather than **methods**. From this perspective, we build robots that assist people in daily life and at work, such as robotic hands and Physical AI for surgery, lab automation, and hotels.
 
-### 2.1. Assistive Robots
+### 2.1. Robotic Hands
 <div class="project-card">
-  <img src="/assets/img/projects/2025_SORO_EGS.png" alt="Wearable robot" class="project-img"/>
+  <img src="/assets/img/projects/2025_SORO_EGS.png" alt="Robotic hands" class="project-img"/>
   <div class="project-text">
-    <h3>Wearable Robots & Prosthetics</h3>
+    <h3>Wearable Robots, Prosthetics & Robot Hands</h3>
     <p>
-      We design and study <strong>tendon-driven wearable robots and prosthetic devices</strong> 
-      to support individuals with motor impairments. Our research spans from 
-      lightweight hand exoskeletons to prosthetic hands, focusing on intuitive 
-      control, comfort, and daily usability.  
+      We design <strong>tendon-driven, under-actuated hands</strong>, from 
+      hand-wearable robots and prosthetic hands that assist people, to 
+      robot hands for humanoids and robot arms.  
     </p>
-    <a href="/projects/wearable/" class="btn">Learn More</a>
+    <a href="/projects/robotic-hands/" class="btn">Learn More</a>
   </div>
 </div>
 
