@@ -57,10 +57,10 @@
       img: /assets/img/members/bear.png
       # website: https://example.com/
 
-    - name: Bear4
-      slug: bear-4
-      img: /assets/img/members/bear.png
-      website: https://example.com/
+    - name: Jungbin Janice Min
+      slug: jjmin_member
+      img: /assets/img/members/jbmin.png
+      #website: https://example.com/
 
     - name: Bear5
       slug: bear-5
