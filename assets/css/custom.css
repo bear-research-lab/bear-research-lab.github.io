@@ -604,3 +604,21 @@ body {
 
     /* readable link color on dark bg */
 }
+/* =======================
+   Tables (override theme's light-only colors)
+   ======================= */
+table tr {
+    background-color: var(--bg);
+    border-top: 1px solid var(--border);
+    color: var(--text);
+}
+
+table tr:nth-child(2n) {
+    background-color: var(--code-bg);
+}
+
+table tr th,
+table tr td {
+    border: 1px solid var(--border);
+    color: var(--text);
+}
