@@ -28,6 +28,7 @@ Byungchul Kim is an Assistant Professor in the Department of Biomedical Engineer
 Dr. Kim earned his B.S., M.S., and Ph.D. degrees in Mechanical and Aerospace Engineering, all from Seoul National University. His research interests include soft robotics, hand-wearable robotic systems, and underactuated tendon-driven mechanisms.  
 
 📄 [Download CV][cv_link]  
+🔗 [LinkedIn]({{ page.linkedin }})  
 
 <nav class="proj-nav" style="margin-top:16px">
   <a class="btn" href="{{ '/members/' | relative_url }}">← Back to Members</a>
