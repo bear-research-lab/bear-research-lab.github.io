@@ -11,4 +11,6 @@ Major: Biomechatronics / Advanced Semiconductor Engineering
 
 Research interests: Robot Foundation Model & Reinforcement Learning 
 
+Personal website: <https://chasseneige109.github.io/>
+
 [Back to Members](/members/)

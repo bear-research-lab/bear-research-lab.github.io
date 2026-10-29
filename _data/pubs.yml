@@ -1,3 +1,22 @@
+- year: 2026
+  month: 10
+  selected: true
+  topics: ["Embodied AI", "Vision Language Models"]
+  title: "What Crosses Time? From Recurrent State to Causal Memory in Vision-Language-Action Models"
+  authors: "Hyungjun Nam, Young Kyun Jang, Byungchul Kim"
+  venue: "NeurIPS 2026 Workshop on Personalized, Aligned, Long-Term Memory for AI Systems (PALM) & 8th Robot Learning Workshop"
+  kind: others
+  img: "/assets/img/pubs/what_crosses_time.png"
+  links:
+    # paper: "https://bear-research-lab.github.io/assets/pub/NeurIPSW_WhatCrossesTime.pdf"
+    bibtex: |
+      @inproceedings{nam2026whatcrosses,
+        title={What Crosses Time? From Recurrent State to Causal Memory in Vision-Language-Action Models},
+        author={Nam, Hyungjun and Jang, Young Kyun and Kim, Byungchul},
+        booktitle={NeurIPS 2026 Workshop on Personalized, Aligned, Long-Term Memory for AI Systems (PALM)},
+        year={2026}
+      }
+
 - year:
   month:
   selected: true
