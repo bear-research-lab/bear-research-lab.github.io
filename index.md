@@ -15,6 +15,9 @@ At the **Bioinspired Embodied AI and Robotics (BEAR) Lab**, we envision a world 
 
 ---
 ## News 
+- **[01/2027]** We are starting a new project, **TWIN-STAY: Adaptive Digital Twin and Robot–Space Co-design for Autonomous Hotel Operation** (호텔 객실 자동화를 위한 적응형 디지털 트윈 및 로봇-공간 공동설계 원천기술 개발).
+- **[09/2026]** [Junwon Lee](/people/jwlee_member/) joins the lab as a graduate student. Welcome!
+- **[07/2026]** We started a new project with **Samsung Medical Center**: 체화지능형 의료로봇 구현을 위한 멀티모달 Action Data Factory 원천기술 개발 (2026.07–2030.06).
 - **[03/2026]** The Bioinspired Embodied AI and Robotics (BEAR) Lab at SKKU is established!
 
 ---
