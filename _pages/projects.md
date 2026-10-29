@@ -8,7 +8,7 @@ Our long-term goal is a **general-purpose robot** that can work alongside people
 ---
 
 ### Category 1. Enabling Technology
-One direction is enabling technology side. This includes how we can build and control robots more systematically and efficiently. This means that we focus on **methods** rather than **specific robots**. From this perspective, we build frameworks that design robots with minimal human effort, using computational approaches including AI, optimization, and simulation.
+The first direction is enabling technology: how we can build and control robots more systematically and efficiently. Here, we focus on **methods** rather than **specific robots**, and build frameworks that design robots with minimal human effort, using computational approaches including AI, optimization, and simulation.
 
 ### 1.1. Computational Robot Co-Design
 <div class="project-card">
@@ -42,7 +42,7 @@ One direction is enabling technology side. This includes how we can build and co
 ---
 
 ### Category 2. Application 
-Another direction is application side. This includes how we can apply robotics to real-world problems, especially in human-centered domains. This means that we focus on **specific robots** rather than **methods**. From this perspective, we build robots that assist people in daily life and at work, such as robotic hands and Physical AI for surgery, lab automation, and hotels.
+The second direction is application: how we can apply robotics to real-world problems, especially in human-centered domains. Here, we focus on **specific robots** rather than **methods**, and build robots that assist people in daily life and at work, such as robotic hands and Physical AI for surgery, lab automation, and hotels.
 
 ### 2.1. Robotic Hands
 <div class="project-card">

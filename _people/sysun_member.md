@@ -9,6 +9,6 @@ title: Seeyah Sun
 
 Major: Biomechatronics
 
-Research interests: Robotics Simulation/ Robot Learning
+Research interests: Robotics Simulation, Robot Learning
 
 [Back to Members](/members/)

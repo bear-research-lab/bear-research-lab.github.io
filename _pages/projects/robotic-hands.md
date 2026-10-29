@@ -3,8 +3,8 @@ layout: page
 title: " "
 permalink: /projects/robotic-hands/
 ---
-### 1. Why we are interested in robotic hands?
-Hands are essential for almost every activity of daily living. For people who have lost hand function due to spinal cord injury, stroke, or other conditions, even simple tasks such as holding a cup become difficult. For people who have lost a hand, a prosthesis is the only way to regain it. A wearable robot that assists grasping, or a prosthetic hand that replaces it, could give them back part of their independence. Robots face the same challenge: to work in human environments, humanoids and robot arms also need hands that can grasp a wide variety of objects.
+### 1. Why are we interested in robotic hands?
+Hands are essential for almost every activity of daily living. For people who have lost hand function due to spinal cord injury, stroke, or other conditions, even simple tasks such as holding a cup become difficult. For people who have lost a hand, a prosthesis is the only way to replace it. A wearable robot that assists grasping, or a prosthetic hand that replaces it, could give them back part of their independence. Robots face the same challenge: to work in human environments, humanoids and robot arms also need hands that can grasp a wide variety of objects.
 
 To be used in daily life, however, these hands should be **light**, **compact**, **easy to put on**, and **simple to control**. Conventional rigid designs with many motors are often too heavy, bulky, and complex for this purpose.
 
@@ -40,4 +40,4 @@ The same tendon-driven and under-actuated principles also apply to robot hands a
 We plan to combine our tendon-driven design principles with our [computational robot co-design](/projects/codesign/) research so that tendon routings and mechanisms can be designed automatically for a given task.
 
 ---
-This page was written with the help of large language model (LLM).
+This page was written with the help of a large language model (LLM).

@@ -4,7 +4,7 @@ title: ""
 permalink: /projects/physical-ai/
 ---
 
-### 1. Why we focus on specific use cases of Physical AI (VLA)?
+### 1. Why do we focus on specific use cases of Physical AI (VLA)?
 Recent **Vision-Language-Action (VLA)** models allow robots to look at a scene, understand an instruction, and generate actions. Many efforts aim at general-purpose robots that can do any task, and this is also our long-term goal. However, general tasks demonstrated in labs or homes rarely survive contact with real workplaces. When we move robots into a real workplace, two questions follow: "Where can we get the data that this workplace needs?" and "How can we trust what the robot will do?"
 
 So instead of general tasks, we focus on **specific use cases** where these questions can be answered. We choose fields where people repeat the same kinds of tasks every day and where the environment and procedures are well defined. Each use case gives us real data, clear success criteria, and a path to deployment, and step by step brings us closer to general robots.

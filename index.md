@@ -26,7 +26,7 @@ For more details, see our [Projects](/projects/) page.
    We design and build robots that support people in daily life, rehabilitation, and healthcare. Current directions include **wearable robots** for mobility and rehabilitation, as well as **home-assistive robots** that enhance independence and quality of life.
 
 2. **Bioinspired Robots and AI**  
-   Nature often provides elegant “local minimum” solutions to complex engineering challenges. We aim to make bioinspiration more **systematic and computational**, leveraging algorithms and simulations to uncover design principles from biology.
+   Nature has evolved elegant solutions to many complex engineering challenges. We aim to make bioinspiration more **systematic and computational**, leveraging algorithms and simulations to uncover design principles from biology.
 
 3. **Embodied/Physical AI for Robotics**  
    Artificial intelligence—particularly **generative AI and physical AI**—offers new ways to design and control robots. We study how AI can:  

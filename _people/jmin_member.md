@@ -9,6 +9,6 @@ title: Jungbin Janice Min
 
 Major: Mechanical Engineering
 
-Research Interest: Soft & Compliant Robotics, AI-driven Robot Design
+Research interests: Soft & Compliant Robotics, AI-driven Robot Design
 
 [Back to Members](/members/)
