@@ -17,7 +17,7 @@ We study how ideas from neuroscience and human motor control can be turned into 
 - **adapt quickly** to new objects, environments, and bodies, and
 - **act reliably** in the physical world.
 
-These methods form the foundation of our application-driven work, such as our [Physical AI (VLA) projects](/projects/physical-ai/).
+These methods form the foundation of our application-driven work, such as our [domain-specific Physical AI projects](/projects/physical-ai/).
 
 ---
 More details will be shared as results are published.

@@ -58,14 +58,14 @@ The second direction is application: how we can apply robotics to real-world pro
   </div>
 </div>
 
-### 2.2. Physical AI (VLA)
+### 2.2. Domain-Specific Physical AI
 <div class="project-card">
-  <img src="/assets/img/projects/physical_ai_vla.svg" alt="Physical AI (VLA)" class="project-img"/>
+  <img src="/assets/img/projects/physical_ai_vla.svg" alt="Domain-specific Physical AI" class="project-img"/>
   <div class="project-text">
-    <h3>Physical AI for Real-World Operation</h3>
+    <h3>Physical AI for Surgery, Labs, and Hotels</h3>
     <p>
-      We build <strong>Vision-Language-Action (VLA) based Physical AI</strong> 
-      for <strong>specific real-world use cases</strong> rather than general tasks: 
+      We deploy <strong>Vision-Language-Action (VLA) based Physical AI</strong> 
+      in <strong>specific real-world domains</strong> rather than on general tasks: 
       <strong>surgical assistance</strong>, <strong>lab automation</strong>, 
       and <strong>hotel room housekeeping</strong>.  
     </p>
