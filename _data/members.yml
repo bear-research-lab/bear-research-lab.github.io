@@ -50,7 +50,7 @@
     - name: Hyungjun (Noah) Nam 
       slug: hnam_member
       img: /assets/img/members/hnam.jpg
-      website: https://chasseneige109.github.io/
+      # website: https://chasseneige109.github.io/
     
     - name: Jungbin Janice Min
       slug: jmin_member
