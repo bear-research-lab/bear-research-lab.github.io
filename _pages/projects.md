@@ -39,6 +39,20 @@ The first direction is enabling technology: how we can build and control robots 
   </div>
 </div>
 
+### 1.3. Under-actuated Tendon Transmission
+<div class="project-card">
+  <img src="/assets/img/projects/tendon_transmission.svg" alt="Under-actuated tendon transmission" class="project-img"/>
+  <div class="project-text">
+    <h3>Under-actuated Tendon Transmission</h3>
+    <p>
+      We develop <strong>tendon routing and transmission methods</strong> 
+      that let a few actuators drive many joints, moving complexity 
+      from motors and controllers into the mechanical design.  
+    </p>
+    <a href="/projects/tendon-transmission/" class="btn">Learn More</a>
+  </div>
+</div>
+
 ---
 
 ### Category 2. Application 
