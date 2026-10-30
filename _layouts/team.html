@@ -2,6 +2,15 @@
 layout: page
 ---
 
+<!-- Team titles are long; shrink the page header on team pages only -->
+<style>
+  .intro-header .page-heading h1 { font-size: 2.25rem; line-height: 1.2; }
+  .intro-header .page-heading .page-subheading { font-size: 1.25rem; }
+  @media (max-width: 767px) {
+    .intro-header .page-heading h1 { font-size: 1.75rem; }
+  }
+</style>
+
 <div class="team-meta">
   <span class="team-program">{{ page.program }}</span>
   <span class="team-year">{{ page.year }}</span>

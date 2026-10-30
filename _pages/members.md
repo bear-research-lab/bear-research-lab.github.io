@@ -144,13 +144,14 @@ permalink: /members/
 {% assign teams_by_year = teams | group_by: "year" %}
 {% for group in teams_by_year %}
 <h4 class="team-year-heading">{{ group.name }}</h4>
-<ul class="team-list">
+<div class="team-grid">
   {% for team in group.items %}
-  <li>
-    <a href="{{ team.url | relative_url }}">{{ team.title }}</a>
+  <a class="team-card" href="{{ team.url | relative_url }}">
     <span class="team-program">{{ team.program }}</span>
-  </li>
+    <span class="team-title">{{ team.title }}</span>
+    <span class="team-more">Details &rarr;</span>
+  </a>
   {% endfor %}
-</ul>
+</div>
 {% endfor %}
 {% endif %}
