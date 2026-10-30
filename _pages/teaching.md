@@ -40,8 +40,8 @@ Courses taught by Prof. Byungchul Kim at SKKU.
   <div class="project-text">
     <p>This course covers how to build and control real robot hardware:</p>
     <ul>
-      <li>Designing PCBs for motor control</li>
-      <li>Controlling motors over <strong>CAN</strong> and <strong>CANopen</strong> from an STM32 board or a Linux PC</li>
+      <li><a href="https://www.youtube.com/playlist?list=PLRPVUUEpZCYk" target="_blank" rel="noopener">Designing PCBs</a> (KiCad lecture videos on YouTube)</li>
+      <li><strong>CAN</strong> &amp; <strong>CANopen</strong></li>
       <li>Motor basics</li>
       <li>Transmissions, including tendon transmission</li>
     </ul>
@@ -53,6 +53,11 @@ Courses taught by Prof. Byungchul Kim at SKKU.
 ### 3. AI for Robot Control
 <div class="project-card">
   <div class="project-text">
-    <p>Course materials will be posted here.</p>
+    <p>This course covers how robots learn to act:</p>
+    <ul>
+      <li><strong>Imitation learning</strong></li>
+      <li><strong>Reinforcement learning</strong>, including <strong>PPO</strong> and <strong>TRPO</strong></li>
+      <li><strong>Robot foundation models</strong>, such as <strong>Vision-Language-Action (VLA)</strong> models</li>
+    </ul>
   </div>
 </div>
