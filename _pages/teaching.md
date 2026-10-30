@@ -41,9 +41,7 @@ Courses taught by Prof. Byungchul Kim at SKKU.
     <p>This course covers how to build and control real robot hardware:</p>
     <ul>
       <li><a href="https://www.youtube.com/playlist?list=PLRPVUUEpZCYk" target="_blank" rel="noopener">Designing PCBs</a> (KiCad lecture videos on YouTube)</li>
-      <li><strong>CAN</strong> &amp; <strong>CANopen</strong></li>
-      <li>Motor basics</li>
-      <li>Transmissions, including tendon transmission</li>
+      <li><a href="https://www.youtube.com/playlist?list=PLQJlFaGn2Rsw" target="_blank" rel="noopener">Motor basics</a> (CAN, CANopen, PWM, Transmission)</li>
     </ul>
     <p>In parallel, we explore the enabling technologies and fields of robotics by reviewing the <em>Springer Handbook of Robotics</em>. Our chapter reviews are collected on the Notion page below.</p>
     <a href="https://thankful-argument-4e8.notion.site/Robotics-Handbook-Study-fe695bc491ec830fa9ec016c120cd4f5" class="btn" target="_blank" rel="noopener">Robotics Handbook Study (Notion)</a>
