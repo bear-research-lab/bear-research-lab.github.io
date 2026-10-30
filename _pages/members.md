@@ -132,3 +132,25 @@ permalink: /members/
 
 {% endcase %}
 {% endfor %}
+
+{% assign teams = site.teams | sort: "year" | reverse %}
+{% if teams.size > 0 %}
+<h3 id="urp-excool-teams">URP / ExCool Teams</h3>
+<p>
+  In URP (Undergraduate Research Program) and ExCool, undergraduate students,
+  graduate students, and faculty work together as one team on a research project.
+</p>
+
+{% assign teams_by_year = teams | group_by: "year" %}
+{% for group in teams_by_year %}
+<h4 class="team-year-heading">{{ group.name }}</h4>
+<ul class="team-list">
+  {% for team in group.items %}
+  <li>
+    <a href="{{ team.url | relative_url }}">{{ team.title }}</a>
+    <span class="team-program">{{ team.program }}</span>
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}
+{% endif %}

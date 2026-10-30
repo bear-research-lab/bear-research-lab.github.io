@@ -21,6 +21,7 @@ At the **Bioinspired Embodied AI and Robotics (BEAR) Lab**, we envision a world 
 - **[10/2026]** Our paper "[What Crosses Time? From Recurrent State to Causal Memory in Vision-Language-Action Models](/publications/)" is accepted to the [NeurIPS 2026 Workshop on Personalized, Aligned, Long-Term Memory for AI Systems (PALM)](https://palm-neurips-2026.github.io/) and the [8th Robot Learning Workshop](https://www.robot-learning.ml/2026/)! Congratulations, [Hyungjun](/people/hnam-member/)!
 - **[09/2026]** [Junwon Lee](/people/jwlee-member/) joins the lab as a graduate student. Welcome!
 - **[07/2026]** We started a new project with **Samsung Medical Center**: **Multimodal Action Data Factory for Embodied-AI Medical Robots** (2026.07–2030.06).
+- **[03/2026]** We started a new project, **AI-based Design Optimization of Task-Specific Robot Hands for Humanoids and Robot Arms** (2026.03–2028.03).
 - **[03/2026]** The Bioinspired Embodied AI and Robotics (BEAR) Lab at SKKU is established!
 
 </div>

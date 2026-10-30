@@ -641,3 +641,41 @@ table tr td {
 .news-box li {
     margin: 0.35rem 0;
 }
+
+/* URP / ExCool teams */
+.team-year-heading {
+    margin-top: 1.25rem;
+}
+
+.team-list {
+    padding-left: 1.25rem;
+}
+
+.team-list li {
+    margin-bottom: 0.4rem;
+}
+
+.team-program {
+    display: inline-block;
+    margin-left: 0.4rem;
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
+    color: var(--pill-text);
+    background-color: var(--pill-bg);
+    border: 1px solid var(--pill-border);
+    border-radius: 999px;
+}
+
+.team-meta {
+    margin-bottom: 0.75rem;
+    color: var(--muted);
+}
+
+.team-meta .team-program {
+    margin-left: 0;
+    margin-right: 0.4rem;
+}
+
+.team-participants .label {
+    font-weight: 600;
+}

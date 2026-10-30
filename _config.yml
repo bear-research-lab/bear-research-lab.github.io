@@ -173,6 +173,9 @@ collections:
   people:
     output: true
     permalink: /people/:slug/
+  teams:
+    output: true
+    permalink: /teams/:path/
 # If you have common JavaScript files that should be included in every page, list them here
 #site-js:
 #  - "/assets/js/custom-script.js"
@@ -290,6 +293,12 @@ defaults:
       layout: "post"
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
+  -
+    scope:
+      path: ""
+      type: "teams"
+    values:
+      layout: "team"
   -
     scope:
       path: "" # any file that's not a post will be a "page" layout by default

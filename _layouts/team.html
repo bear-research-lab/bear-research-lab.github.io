@@ -1,0 +1,16 @@
+---
+layout: page
+---
+
+<div class="team-meta">
+  <span class="team-program">{{ page.program }}</span>
+  <span class="team-year">{{ page.year }}</span>
+</div>
+
+{% if page.participants %}
+<p class="team-participants"><span class="label">Participants:</span> {{ page.participants | join: ", " }}</p>
+{% endif %}
+
+{{ content }}
+
+<p><a href="{{ '/members/#urp-excool-teams' | relative_url }}">Back to Members</a></p>
