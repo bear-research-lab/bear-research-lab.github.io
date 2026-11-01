@@ -8,7 +8,7 @@
   kind: others
   img: "/assets/img/pubs/what_crosses_time.png"
   links:
-    # paper: "https://bear-research-lab.github.io/assets/pub/NeurIPSW_WhatCrossesTime.pdf"
+    paper: "https://bear-research-lab.github.io/assets/pub/2026_NeurIPSW_WhatCrossesTime.pdf"
     bibtex: |
       @inproceedings{nam2026whatcrosses,
         title={What Crosses Time? From Recurrent State to Causal Memory in Vision-Language-Action Models},
