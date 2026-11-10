@@ -4,7 +4,7 @@ title: Byungchul Kim
 img: /assets/img/members/bckim.jpg
 role: Assistant Professor
 affiliation: Department of Biomedical Engineering, Sungkyunkwan University
-interests: [Soft Robotics, Hand-Wearable Robotic Systems, Underactuated Tendon-Driven Mechanisms]
+interests: [AI-Driven Robot Codesign, Physical AI, Soft Robotics, Underactuated Tendon-Driven Mechanisms]
 website: https://bc-kim.github.io
 scholar: https://scholar.google.com/citations?user=KPQ53S0AAAAJ&hl=en
 linkedin: https://www.linkedin.com/in/byungchul-kim/

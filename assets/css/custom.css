@@ -511,6 +511,18 @@ body {
 /* =======================
    Person (member detail) pages — _layouts/person.html
    ======================= */
+/* Smaller page title on member pages only (theme default is very large) */
+body:has(.person-header) .intro-header .page-heading h1 {
+    font-size: 2.6rem;
+    line-height: 1.15;
+}
+
+@media (max-width: 640px) {
+    body:has(.person-header) .intro-header .page-heading h1 {
+        font-size: 2rem;
+    }
+}
+
 .person-header {
     display: grid;
     grid-template-columns: 180px 1fr;
