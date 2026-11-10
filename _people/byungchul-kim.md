@@ -26,7 +26,7 @@ cv: /assets/CV/CV_BCKIM.pdf
 ## Bio
 Byungchul Kim is an Assistant Professor in the Department of Biomedical Engineering at Sungkyunkwan University (SKKU), Korea. From 2023 to 2026, he was a Postdoctoral Research Associate at MIT, working with [Professor Daniela Rus][Lab_Daniela_Link] in the Computer Science and Artificial Intelligence Laboratory (CSAIL). Before MIT, he was a Postdoctoral Research Associate at the Soft Robotics Research Center (SRRC), collaborating with [Professor Kyu-Jin Cho][Lab_link] in the Department of Mechanical Engineering at Seoul National University.  
 
-Dr. Kim earned his B.S., M.S., and Ph.D. degrees in Mechanical and Aerospace Engineering, all from Seoul National University. His research interests include soft robotics, hand-wearable robotic systems, and underactuated tendon-driven mechanisms.  
+Dr. Kim earned his B.S., M.S., and Ph.D. degrees in Mechanical and Aerospace Engineering, all from Seoul National University. His research interests include soft robotics, hand-wearable robotic systems, and underactuated tendon-driven mechanisms. 
 
 [Lab_Daniela_Link]: https://www.csail.mit.edu/person/daniela-rus
 [Lab_link]: https://biorobotics.snu.ac.kr/lab-members
