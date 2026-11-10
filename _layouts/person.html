@@ -1,0 +1,123 @@
+---
+layout: page
+---
+{%- comment -%}
+person.html — profile layout for _people/*.md
+
+Front matter (all optional; anything missing falls back to the matching
+entry in _data/members.yml, found by slug = file name):
+  title:       Display name
+  img:         Photo path (default: bear placeholder)
+  role:        e.g. "Undergraduate Researcher"
+  affiliation: e.g. "Dept. of Biomedical Engineering, SKKU"
+  major:       e.g. "Mechanical Engineering"
+  interests:   [List, Of, Topics]           -> shown as chips
+  website / scholar / github / linkedin / cv / email
+  aliases:     [Other spellings used in pubs.yml author lists]
+
+The Markdown body is shown under the header. Publications whose author list
+contains the member's name (or an alias) are listed automatically.
+{%- endcomment -%}
+
+{%- assign member = nil -%}
+{%- for g in site.data.members -%}
+{%- for m in g.people -%}
+{%- if m.slug == page.slug -%}{%- assign member = m -%}{%- endif -%}
+{%- endfor -%}
+{%- endfor -%}
+
+{%- assign p_name = page.title | default: member.name | strip -%}
+{%- assign p_img = page.img | default: member.img | default: '/assets/img/members/bear.png' -%}
+{%- assign p_role = page.role | default: member.role -%}
+{%- assign p_affiliation = page.affiliation | default: member.affiliation -%}
+{%- assign p_major = page.major | default: member.major -%}
+{%- assign p_interests = page.interests | default: member.interests -%}
+{%- assign p_website = page.website | default: member.website -%}
+{%- assign p_scholar = page.scholar | default: member.scholar -%}
+{%- assign p_github = page.github | default: member.github -%}
+{%- assign p_linkedin = page.linkedin | default: member.linkedin -%}
+{%- assign p_cv = page.cv | default: member.cv -%}
+{%- assign p_email = page.email | default: member.email -%}
+
+<div class="person-header">
+  <img class="person-photo" src="{{ p_img | relative_url }}" alt="{{ p_name | escape }}">
+  <div class="person-meta">
+    {%- if p_role -%}<div class="person-role">{{ p_role }}</div>{%- endif -%}
+    {%- if p_affiliation -%}<div class="person-line">{{ p_affiliation }}</div>{%- endif -%}
+    {%- if p_major -%}<div class="person-line"><span class="label">Major</span>{{ p_major }}</div>{%- endif -%}
+    {%- if p_email -%}
+    <div class="person-line"><span class="label">Email</span>
+      {%- if p_email contains '@' -%}<a href="mailto:{{ p_email }}">{{ p_email }}</a>{%- else -%}{{ p_email }}{%- endif -%}
+    </div>
+    {%- endif -%}
+
+    <div class="person-links">
+      {%- if p_website -%}<a href="{{ p_website }}" target="_blank" rel="noopener">Website</a>{%- endif -%}
+      {%- if p_scholar -%}<a href="{{ p_scholar }}" target="_blank" rel="noopener">Google Scholar</a>{%- endif -%}
+      {%- if p_github -%}<a href="{{ p_github }}" target="_blank" rel="noopener">GitHub</a>{%- endif -%}
+      {%- if p_linkedin -%}<a href="{{ p_linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{%- endif -%}
+      {%- if p_cv -%}<a href="{{ p_cv | relative_url }}" target="_blank" rel="noopener">CV</a>{%- endif -%}
+    </div>
+  </div>
+</div>
+
+{%- if p_interests and p_interests.size > 0 -%}
+<section class="person-section">
+  <h2>Research Interests</h2>
+  <div class="person-chips">
+    {%- for it in p_interests -%}<span class="person-chip">{{ it }}</span>{%- endfor -%}
+  </div>
+</section>
+{%- endif -%}
+
+{%- assign body = content | strip -%}
+{%- if body != '' -%}
+<section class="person-section person-body">
+  {{ content }}
+</section>
+{%- endif -%}
+
+{%- comment -%} Publications: match name + aliases (members.yml and front matter) {%- endcomment -%}
+{%- assign m_aliases = member.aliases | join: '|' -%}
+{%- assign f_aliases = page.aliases | join: '|' -%}
+{%- assign names_csv = p_name | append: '|' | append: member.name | append: '|' | append: m_aliases | append: '|' | append: f_aliases -%}
+{%- assign raw_names = names_csv | split: '|' -%}
+{%- assign names = '' | split: '' -%}
+{%- for n in raw_names -%}
+{%- assign n2 = n | strip -%}
+{%- if n2 != '' -%}{%- assign names = names | push: n2 -%}{%- endif -%}
+{%- endfor -%}
+
+{%- assign my_pubs = '' | split: '' -%}
+{%- for pub in site.data.pubs -%}
+{%- assign hit = false -%}
+{%- for n in names -%}
+{%- if pub.authors contains n -%}{%- assign hit = true -%}{%- endif -%}
+{%- endfor -%}
+{%- if hit -%}{%- assign my_pubs = my_pubs | push: pub -%}{%- endif -%}
+{%- endfor -%}
+
+{%- if my_pubs.size > 0 -%}
+<section class="person-section">
+  <h2>Publications <span class="person-count">{{ my_pubs.size }}</span></h2>
+  <div class="person-pubs">
+    {%- for pub in my_pubs -%}
+    {%- include pub-item.html pub=pub -%}
+    {%- endfor -%}
+  </div>
+</section>
+<script>
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    if (t.matches('.toggle-bibtex, .toggle-press, .toggle-links')) {
+      e.preventDefault();
+      var el = document.getElementById(t.getAttribute('data-target'));
+      if (el) el.setAttribute('aria-hidden', el.getAttribute('aria-hidden') === 'true' ? 'false' : 'true');
+    }
+  });
+</script>
+{%- endif -%}
+
+<nav class="person-nav">
+  <a href="{{ '/members/' | relative_url }}">← Back to Members</a>
+</nav>

@@ -1,14 +1,8 @@
 ---
-layout: page
+layout: person
 title: TaeWoo Park
+img: /assets/img/members/bear.png
+role: Undergraduate Researcher
+major: Mechanical Engineering
+interests: [AI Robotics, Brain-Computer Interfaces (BCI)]
 ---
-
-<img src="/assets/img/members/bear.png" alt="TaeWoo Park" style="width:200px; border-radius:10px;">
-
-**TaeWoo Park** is an undergraduate researcher in the lab.
-
-Major: Mechanical Engineering
-
-Research interests: AI Robotics&BCI
-
-[Back to Members](/members/)

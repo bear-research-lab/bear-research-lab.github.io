@@ -1,14 +1,8 @@
 ---
-layout: page
+layout: person
 title: Do Hyun Park
+img: /assets/img/members/dhpark.png
+role: Undergraduate Researcher
+major: Mechanical Engineering
+interests: [Robot Hardware Analysis & Design, Soft & Compliant Robotics, AI-driven Robot Design]
 ---
-
-<img src="/assets/img/members/dhpark.png" alt="Do Hyun Park" style="width:200px; border-radius:10px;">
-
-**Do Hyun Park** is an undergraduate researcher in the lab.
-
-Major: Mechanical Engineering
-
-Research interests: Robot Hardware Analysis & Design, Soft & Compliant Robotics, AI-driven Robot Design
-
-[Back to Members](/members/)

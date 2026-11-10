@@ -1,11 +1,9 @@
 ---
-layout: page
-title: bear-1
+layout: person
+title: Bear 1
+img: /assets/img/members/bear.png
+role: PhD Student
+interests: [Robotics, AI]
 ---
 
-<img src="/assets/img/members/bear.png" alt="Bear1" style="width:200px; border-radius:10px;">
-
-**Bear 1** is a PhD student in the lab.  
 Robotics enthusiast. AI researcher. Coffee lover.
-
-[Back to Members](/members/)

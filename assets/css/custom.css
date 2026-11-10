@@ -509,6 +509,153 @@ body {
 }
 
 /* =======================
+   Person (member detail) pages — _layouts/person.html
+   ======================= */
+.person-header {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+    align-items: center;
+    padding: 20px;
+    margin: 8px 0 28px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--card);
+    box-shadow: var(--shadow);
+}
+
+.person-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    background: var(--pill-bg);
+    display: block;
+}
+
+.person-meta {
+    color: var(--text-2);
+    font-size: 0.98rem;
+    line-height: 1.5;
+    min-width: 0;
+}
+
+.person-role {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.person-line {
+    margin-top: 2px;
+    overflow-wrap: anywhere;
+}
+
+.person-line .label {
+    font-weight: 600;
+    color: var(--muted);
+    margin-right: 8px;
+}
+
+.person-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.person-links:empty {
+    display: none;
+}
+
+.person-links a,
+.person-nav a {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid var(--pill-border);
+    border-radius: 999px;
+    background: var(--pill-bg);
+    color: var(--pill-text) !important;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    text-decoration: none !important;
+    transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.person-links a:hover,
+.person-nav a:hover {
+    border-color: var(--muted);
+    color: var(--text) !important;
+}
+
+.person-section {
+    margin: 0 0 28px;
+}
+
+.person-section > h2,
+.person-body h2 {
+    font-size: 1.25rem;
+    margin: 0 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+}
+
+.person-body h2 {
+    margin-top: 24px;
+}
+
+.person-body > h2:first-child {
+    margin-top: 0;
+}
+
+.person-count {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--muted);
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.person-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.person-chip {
+    padding: 4px 12px;
+    border: 1px solid var(--pill-border);
+    border-radius: 999px;
+    background: var(--pill-bg);
+    color: var(--pill-text);
+    font-size: 0.9rem;
+}
+
+.person-nav {
+    margin: 8px 0 16px;
+}
+
+@media (max-width: 640px) {
+    .person-header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .person-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .person-links {
+        justify-content: center;
+    }
+}
+
+/* =======================
    Projects Section
    ======================= */
 .project-card {

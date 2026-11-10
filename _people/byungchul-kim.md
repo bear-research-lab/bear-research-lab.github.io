@@ -1,14 +1,15 @@
 ---
-layout: page
+layout: person
 title: Byungchul Kim
-slug: byungchul-kim
 img: /assets/img/members/bckim.jpg
-role: Assistant Professor (SKKU)
+role: Assistant Professor
 affiliation: Department of Biomedical Engineering, Sungkyunkwan University
+interests: [Soft Robotics, Hand-Wearable Robotic Systems, Underactuated Tendon-Driven Mechanisms]
 website: https://bc-kim.github.io
-linkedin: https://www.linkedin.com/in/byungchul-kim/
-email: "bckim@mit.edu"
 scholar: https://scholar.google.com/citations?user=KPQ53S0AAAAJ&hl=en
+linkedin: https://www.linkedin.com/in/byungchul-kim/
+cv: /assets/CV/CV_BCKIM.pdf
+# email: not set here, so the SKKU address from _data/members.yml is shown
 ---
 
 ## Experience 
@@ -27,13 +28,5 @@ Byungchul Kim is an Assistant Professor in the Department of Biomedical Engineer
 
 Dr. Kim earned his B.S., M.S., and Ph.D. degrees in Mechanical and Aerospace Engineering, all from Seoul National University. His research interests include soft robotics, hand-wearable robotic systems, and underactuated tendon-driven mechanisms.  
 
-📄 [Download CV][cv_link]  
-🔗 [LinkedIn]({{ page.linkedin }})  
-
-<nav class="proj-nav" style="margin-top:16px">
-  <a class="btn" href="{{ '/members/' | relative_url }}">← Back to Members</a>
-</nav>
-
-[Lab_Daniela_Link]: https://www.csail.mit.edu/person/daniela-rus  
-[Lab_link]: https://biorobotics.snu.ac.kr/lab-members  
-[cv_link]: https://bear-research-lab.github.io/assets/CV/CV_BCKIM.pdf
+[Lab_Daniela_Link]: https://www.csail.mit.edu/person/daniela-rus
+[Lab_link]: https://biorobotics.snu.ac.kr/lab-members
