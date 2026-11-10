@@ -74,19 +74,19 @@ Supports:
 {%- endcapture -%}
 
 {%- comment -%}
-Link author names that match a member in _data/members.yml to /people/<slug>/.
+Link author names that match a member in _data/members.yml to their _people page.
 Only members whose _people/<slug>.md page exists are linked (avoids 404s).
 Two passes (name -> token -> link) so one link is never rewritten by a later member.
 {%- endcomment -%}
-{%- assign people_urls = site.people | map: 'url' | join: '|' | prepend: '|' | append: '|' -%}
 {%- assign authors_html = p.authors | default: '' -%}
 {%- assign author_tokens = '' -%}
 {%- for group in site.data.members -%}
 {%- for m in group.people -%}
 {%- if m.slug -%}
-{%- assign m_url = '/people/' | append: m.slug | append: '/' -%}
-{%- assign m_key = '|' | append: m_url | append: '|' -%}
-{%- if people_urls contains m_key -%}
+{%- comment -%} Look up the page by slug and use its real URL (Jekyll turns '_' into '-' in URLs) {%- endcomment -%}
+{%- assign m_doc = site.people | where: "slug", m.slug | first -%}
+{%- if m_doc -%}
+{%- assign m_url = m_doc.url -%}
 {%- assign m_names = m.aliases | join: '|' | prepend: '|' | prepend: m.name | split: '|' -%}
 {%- for nm in m_names -%}
 {%- assign nm = nm | strip -%}
