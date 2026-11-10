@@ -73,6 +73,40 @@ Supports:
 </ul>
 {%- endcapture -%}
 
+{%- comment -%}
+Link author names that match a member in _data/members.yml to /people/<slug>/.
+Only members whose _people/<slug>.md page exists are linked (avoids 404s).
+Two passes (name -> token -> link) so one link is never rewritten by a later member.
+{%- endcomment -%}
+{%- assign people_urls = site.people | map: 'url' | join: '|' | prepend: '|' | append: '|' -%}
+{%- assign authors_html = p.authors | default: '' -%}
+{%- assign author_tokens = '' -%}
+{%- for group in site.data.members -%}
+{%- for m in group.people -%}
+{%- if m.slug -%}
+{%- assign m_url = '/people/' | append: m.slug | append: '/' -%}
+{%- assign m_key = '|' | append: m_url | append: '|' -%}
+{%- if people_urls contains m_key -%}
+{%- assign m_names = m.aliases | join: '|' | prepend: '|' | prepend: m.name | split: '|' -%}
+{%- for nm in m_names -%}
+{%- assign nm = nm | strip -%}
+{%- if nm != '' and authors_html contains nm -%}
+{%- assign tok = '@@AUTHOR-' | append: m.slug | append: '-' | append: forloop.index | append: '@@' -%}
+{%- assign authors_html = authors_html | replace: nm, tok -%}
+{%- capture link -%}<a class="pub-author-link" href="{{ m_url | relative_url }}">{{ nm }}</a>{%- endcapture -%}
+{%- assign author_tokens = author_tokens | append: tok | append: '##' | append: link | append: '&&&' -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endfor -%}
+{%- assign token_pairs = author_tokens | split: '&&&' -%}
+{%- for pair in token_pairs -%}
+{%- assign parts = pair | split: '##' -%}
+{%- assign authors_html = authors_html | replace: parts[0], parts[1] -%}
+{%- endfor -%}
+
 <div class="pub-item" data-year="{{ p.year }}" data-topics="{{ topics_csv }}"
     data-kind="{{ p.kind | downcase | default: 'others' }}" data-selected="{{ p.selected | default: false }}">
 
@@ -83,7 +117,7 @@ Supports:
     <div class="pub-body">
         <div class="pub-headline">
             <div class="pub-title"><strong>{{ p.title }}</strong></div>
-            <div class="pub-authors">{{ p.authors }}</div>
+            <div class="pub-authors">{{ authors_html }}</div>
             <div class="pub-venue">
                 {%- if p.venue -%}{{ p.venue }}{%- endif -%}
             </div>

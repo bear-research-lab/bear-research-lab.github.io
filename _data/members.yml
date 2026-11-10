@@ -49,6 +49,7 @@
 
     - name: Hyungjun (Noah) Nam 
       slug: hnam_member
+      aliases: ["Hyungjun Nam"]   # other spellings used in pubs.yml author lists
       img: /assets/img/members/hnam.jpg
       # website: https://chasseneige109.github.io/
     

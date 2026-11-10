@@ -95,6 +95,18 @@ body {
     margin-bottom: 2px;
 }
 
+.pub-authors a.pub-author-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    text-underline-offset: 2px;
+}
+
+.pub-authors a.pub-author-link:hover {
+    color: var(--text);
+    text-decoration-color: currentColor;
+}
+
 .pub-venue {
     font-size: 13px;
     color: var(--muted);
