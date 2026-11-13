@@ -18,8 +18,10 @@ At the **Bioinspired Embodied AI and Robotics (BEAR) Lab**, we envision a world 
 <div class="news-box" markdown="1">
 
 - **[01/2027]** We are starting a new project, **TWIN-STAY: Adaptive Digital Twin and Robot–Space Co-design for Autonomous Hotel Operation**.
+- **[11/2026]** Prof. Byungchul Kim gave an invited talk, "**Toward Task-Specific Robot Co-Design with AI**," in the [Promising Scientists and Engineers Session (유망과학기술자 세션)](https://ksme.or.kr/Proceedings/2026a/sub02_4.asp) of the Dynamics, Control and Robotics Division at the **KSME 2026 Annual Meeting** (ICC Jeju).
 - **[10/2026]** Our paper "[What Crosses Time? From Recurrent State to Causal Memory in Vision-Language-Action Models](/publications/)" is accepted to the [NeurIPS 2026 Workshop on Personalized, Aligned, Long-Term Memory for AI Systems (PALM)](https://palm-neurips-2026.github.io/) and the [8th Robot Learning Workshop](https://www.robot-learning.ml/2026/)! Congratulations, [Hyungjun](/people/hnam-member/)!
 - **[09/2026]** [Junwon Lee](/people/jwlee-member/) joins the lab as a graduate student. Welcome!
+- **[07/2026]** Prof. Byungchul Kim gave an invited talk, "**Toward Safe Robot Design for Domestic Environments**," in the [Outstanding Young Researchers Session (우수신진연구자세션)](https://2026.icros.org/?page_id=51) at the **ICROS 2026 Annual Conference** (EXCO, Daegu).
 - **[07/2026]** We started a new project with **Samsung Medical Center**: **Multimodal Action Data Factory for Embodied-AI Medical Robots** (2026.07–2030.06).
 - **[03/2026]** We started a new project, **AI-based Design Optimization of Task-Specific Robot Hands for Humanoids and Robot Arms** (2026.03–2028.03).
 - **[03/2026]** The Bioinspired Embodied AI and Robotics (BEAR) Lab at SKKU is established!

@@ -5,4 +5,5 @@ img: /assets/img/members/jmin.png
 role: Undergraduate Researcher
 major: Mechanical Engineering
 interests: [Soft & Compliant Robotics, AI-driven Robot Design]
+website: https://janice-min.github.io/penguin/
 ---
