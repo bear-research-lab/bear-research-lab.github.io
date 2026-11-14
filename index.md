@@ -18,6 +18,7 @@ At the **Bioinspired Embodied AI and Robotics (BEAR) Lab**, we envision a world 
 <div class="news-box" markdown="1">
 
 - **[01/2027]** We are starting a new project, **TWIN-STAY: Adaptive Digital Twin and Robot–Space Co-design for Autonomous Hotel Operation**.
+- **[11/2026]** Prof. Byungchul Kim gave a public lecture, "**Custom Robots Made with AI: From Body Shape to Movement** (AI와 함께 만드는, 맞춤형 로봇)," at the [7th RAIM Colloquium](https://science.seoul.go.kr/RAIM/bbsctt/view.do?menuTy=&bbscttSn=2611110001&sc_bbsctt_field_sn=0009&sc_bbsctt_adit_iem_cn=&key=2305090002&sc_custom1=&pageIndex=1&orderBy=bbscttOrdr+desc&sc_cate=&sw=) of the **Seoul Robot & AI Science Museum (RAIM)**.
 - **[11/2026]** Prof. Byungchul Kim gave an invited talk, "**Toward Task-Specific Robot Co-Design with AI**," in the [Promising Scientists and Engineers Session (유망과학기술자 세션)](https://ksme.or.kr/Proceedings/2026a/sub02_4.asp) of the Dynamics, Control and Robotics Division at the **KSME 2026 Annual Meeting** (ICC Jeju).
 - **[10/2026]** Our paper "[What Crosses Time? From Recurrent State to Causal Memory in Vision-Language-Action Models](/publications/)" is accepted to the [NeurIPS 2026 Workshop on Personalized, Aligned, Long-Term Memory for AI Systems (PALM)](https://palm-neurips-2026.github.io/) and the [8th Robot Learning Workshop](https://www.robot-learning.ml/2026/)! Congratulations, [Hyungjun](/people/hnam-member/)!
 - **[09/2026]** [Junwon Lee](/people/jwlee-member/) joins the lab as a graduate student. Welcome!
